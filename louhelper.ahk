@@ -1377,12 +1377,8 @@ MAINLOOP:
 				if (Lockpicking)
 					SendHotkey(WinName,BackpackKey)
 				
-				;Target a pet if Veterinary
-				if (Vet)
-					SendHotkey(WinName,NextTargetKey)
-				
-				;Target closest if attacking
-				if (Physical or MagicAtk)
+				;Target closest
+				if (Vet or Lore or Physical or MagicAtk)
 					SendHotkey(WinName,NextTargetKey)
 			}
 		}
