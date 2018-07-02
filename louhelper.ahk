@@ -40,7 +40,7 @@ IniRead, MaxCustom, %TempConfig%, GuiSettings, MaxCustom
 IniRead, MaxCustomKeys, %TempConfig%, GuiSettings, MaxCustomKeys
 
 StringTrimRight, TempConfig, TempConfig, 4
-guiname := "LoU Helper v1.0 - " . TempConfig
+guiname := "LoU Helper v1.1 - " . TempConfig
 
 ;Get Routine Messages
 IniRead, RoutineMessages, config.ini, ConfigRoutineMessages
@@ -53,13 +53,13 @@ Loop Parse, RoutineMessages, `n
 ;Lists of settings to iterate
 Tabs = General|GeneralKeys|Taming|Music|Healing|Hiding|Fishing|Offensive|Lockpicking|Custom|Harvesting|ItemID|CustomKeys
 
-GuiSettingsList = OnTop,FromName,WinName,AutoRelog,CharNumber,Sens,LagDelay,KeyDelay,Taming,TamingDelay,Release,ReleaseDelay,ReleaseSens,Lore,LoreDelay,Vet,VetDelay,Music,MusicDelay,Peace,PeaceDelay,Provo,ProvoDelay,Discord,DiscordDelay,Bandages,MagicHeal,CurePot,CureSpell,HealingDelay,Hiding,Stealth,Steps,HidingDelay,Fishing,FishingDelay,FishingX1,FishingY1,Fishing2,FishingX2,FishingY2,FishingTotal,Physical,PhysicalDuration,MagicAtk,DoubleTarget,OffensiveDelay,Lockpicking,LockpickDelay,Box1X,Box1Y,Lockpicking2,Box2X,Box2Y,LockpickingSens,ItemID,ItemIDSourceTLX,ItemIDSourceTLY,ItemIDSourceBRX,ItemIDSourceBRY,ItemIDContainerX,ItemIDContainerY,ItemIDSens,CustomRoutineDelay,HarvestingRoutineDelay,HarvestSens
+GuiSettingsList = OnTop,FromName,WinName,AutoRelog,CharNumber,Sens,LagDelay,KeyDelay,Taming,TamingDelay,Release,ReleaseDelay,ReleaseSens,Lore,LoreDelay,Vet,VetDelay,Music,MusicDelay,Peace,PeaceDelay,Provo,ProvoDelay,Discord,DiscordDelay,Bandages,MagicHeal,CurePot,CureSpell,HealingDelay,Hiding,Stealth,Steps,HidingDelay,Fishing,FishingDelay,FishingX1,FishingY1,Fishing2,FishingX2,FishingY2,FishingTotal,Physical,PhysicalDuration,MagicAtk,DoubleTarget,OffensiveDelay,Lockpicking,LockpickDelay,Box1X,Box1Y,Lockpicking2,Box2X,Box2Y,LockpickingSens,ItemID,ItemIDSourceTLX,ItemIDSourceTLY,ItemIDSourceBRX,ItemIDSourceBRY,ItemIDContainerX,ItemIDContainerY,ItemIDSens,ItemIDDelay,CustomRoutineDelay,HarvestingRoutineDelay,HarvestSens
 
 GuiDPSettingsList = BandagesTarget,MagicHealTarget,CurePotTarget,CureSpellTarget,MagicAtkTarget
 
 GuiHotkeysList = SelfKey,TargetKey,LastKey,SkillKey,SecondKey,NextTargetKey,CenterCamKey,BackpackKey,StopKey,EmergencyKey,LeftKey,RightKey,UpKey,DownKey,TamingKey,ReleaseKey,LoreKey,AllKillKey,AllStopKey,MusicKey,PeaceKey,ProvoKey,DiscordKey,BandagesKey,MagicHealKey,CurePotKey,CureSpellKey,HidingKey,FishingKey1,FishingKey2,FishingKey3,FishingKey4,FishingKey5,FishingKey6,FishingKey7,FishingKey8,FishingKey9,PhysicalKey,MagicAtkKey,Box1Key,Box2Key,GlassKey,LockpickKey
 
-GuiLabelsList = OptionTitle,TabsList,ConfigLabel,ClientNameLabel,FromNameLabel,ToNameLabel,CharNumberLabel,SensLabel,SelfKeyLabel,TargetKeyLabel,LastKeyLabel,SkillKeyLabel,SecondKeyLabel,NextTargetKeyLabel,CenterCamKeyLabel,BackpackKeyLabel,KeyDelayLabel,LagDelayLabel,StopKeyLabel,EmergencyKeyLabel,UpKeyLabel,LeftKeyLabel,DownKeyLabel,RightKeyLabel,TamingKeyLabel,TamingDelayLabel,ReleaseKeyLabel,ReleaseDelayLabel,ReleaseSensLabel,LoreKeyLabel,LoreDelayLabel,AllKillKeyLabel,AllStopKeyLabel,VetDelayLabel,MusicKeyLabel,MusicDelayLabel,PeaceKeyLabel,PeaceDelayLabel,ProvoKeyLabel,ProvoDelayLabel,DiscordKeyLabel,DiscordDelayLabel,BandagesKeyLabel,MagicHealKeyLabel,CurePotLabel,CureSpellLabel,HealingDelayLabel,HidingKeyLabel,HidingDelayLabel,StepsLabel,FishingTotalLabel,FishingDelayLabel,FishingX1Label,FishingY1Label,FishingX2Label,FishingY2Label,FishingKey1Label,FishingKey2Label,FishingKey3Label,FishingKey4Label,FishingKey5Label,FishingKey6Label,FishingKey7Label,FishingKey8Label,FishingKey9Label,PhysicalKeyLabel,PhysicalDurationLabel,MagicAtkKeyLabel,OffensiveDelayLabel,LockpickKeyLabel,LockpickDelayLabel,Box1XLabel,Box1YLabel,Box1KeyLabel,Box2XLabel,Box2YLabel,Box2KeyLabel,LockpickingSensLabel,ItemIDSourceTLXLabel,ItemIDSourceTLYLabel,ItemIDSourceBRXLabel,ItemIDSourceBRYLabel,ItemIDContainerXLabel,ItemIDContainerYLabel,GlassKeyLabel,ItemIDSensLabel,CustomRoutineDelayLabel,HarvestingRoutineDelayLabel,HarvestSensLabel
+GuiLabelsList = OptionTitle,TabsList,ConfigLabel,ClientNameLabel,FromNameLabel,ToNameLabel,CharNumberLabel,SensLabel,SelfKeyLabel,TargetKeyLabel,LastKeyLabel,SkillKeyLabel,SecondKeyLabel,NextTargetKeyLabel,CenterCamKeyLabel,BackpackKeyLabel,KeyDelayLabel,LagDelayLabel,StopKeyLabel,EmergencyKeyLabel,UpKeyLabel,LeftKeyLabel,DownKeyLabel,RightKeyLabel,TamingKeyLabel,TamingDelayLabel,ReleaseKeyLabel,ReleaseDelayLabel,ReleaseSensLabel,LoreKeyLabel,LoreDelayLabel,AllKillKeyLabel,AllStopKeyLabel,VetDelayLabel,MusicKeyLabel,MusicDelayLabel,PeaceKeyLabel,PeaceDelayLabel,ProvoKeyLabel,ProvoDelayLabel,DiscordKeyLabel,DiscordDelayLabel,BandagesKeyLabel,MagicHealKeyLabel,CurePotLabel,CureSpellLabel,HealingDelayLabel,HidingKeyLabel,HidingDelayLabel,StepsLabel,FishingTotalLabel,FishingDelayLabel,FishingX1Label,FishingY1Label,FishingX2Label,FishingY2Label,FishingKey1Label,FishingKey2Label,FishingKey3Label,FishingKey4Label,FishingKey5Label,FishingKey6Label,FishingKey7Label,FishingKey8Label,FishingKey9Label,PhysicalKeyLabel,PhysicalDurationLabel,MagicAtkKeyLabel,OffensiveDelayLabel,LockpickKeyLabel,LockpickDelayLabel,Box1XLabel,Box1YLabel,Box1KeyLabel,Box2XLabel,Box2YLabel,Box2KeyLabel,LockpickingSensLabel,ItemIDSourceTLXLabel,ItemIDSourceTLYLabel,ItemIDSourceBRXLabel,ItemIDSourceBRYLabel,ItemIDContainerXLabel,ItemIDContainerYLabel,GlassKeyLabel,ItemIDSensLabel,ItemIDDelayLabel,CustomRoutineDelayLabel,HarvestingRoutineDelayLabel,HarvestSensLabel
 
 GuiSetButtonsList = LoadedConfig,SetName,SetFishing,SetBox,SetSpotTarget,SetCustomCoordsItem,SetCustomCoordsTarget
 
@@ -476,6 +476,9 @@ Gui, Add, Edit, xp+85 y%Line4Text% w%HotkeyWidth% vGlassKey
 Gui, Add, Text, xp+50 y%Line4% w150 Right vItemIDSensLabel, Tolerance for image searching
 Gui, Add, Edit, xp+155 y%Line4Text% w%CoordWidth% HwndHItemIDSens vItemIDSens, 100
 TT.Attach(HItemIDSens, "Tolerance for Image Search. Raise if it never matches with the correct unidentifed.bmp. Over 100 is too much")
+;Delay
+Gui, Add, Text, x%Left% y%Line5% w%DelayLabelWidth% Right vItemIDDelayLabel, Delay
+Gui, Add, Edit, xp+72 y%Line5Text% w%DelayWidth% vItemIDDelay
 
 ;;Harvesting Settings
 Gui, Tab, Harvesting
@@ -1852,6 +1855,7 @@ MAINLOOP:
 				MouseMove, CenterX, CenterY, 0
 				Sleep 2000
 			}
+			Sleep %ItemIDDelay%
 		}
 	
 		if breakvar = 1
