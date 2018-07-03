@@ -9,6 +9,9 @@ CoordMode, Mouse, Window
 ; This is used because alt modifier would send the ctrl modifier as well. Check AHK docs.
 #MenuMaskKey vk07 
 
+;Add last object hotkey for custom routines target options.
+;Fixed error with healing sleep being applied to all routines.
+
 FileInstall, back.bmp, back.bmp
 FileInstall, character.bmp, character.bmp
 FileInstall, charplay.bmp, charplay.bmp
@@ -40,7 +43,7 @@ IniRead, MaxCustom, %TempConfig%, GuiSettings, MaxCustom
 IniRead, MaxCustomKeys, %TempConfig%, GuiSettings, MaxCustomKeys
 
 StringTrimRight, TempConfig, TempConfig, 4
-guiname := "LoU Helper v1.1 - " . TempConfig
+guiname := "LoU Helper v1.2 - " . TempConfig
 
 ;Get Routine Messages
 IniRead, RoutineMessages, config.ini, ConfigRoutineMessages
@@ -57,9 +60,9 @@ GuiSettingsList = OnTop,FromName,WinName,AutoRelog,CharNumber,Sens,LagDelay,KeyD
 
 GuiDPSettingsList = BandagesTarget,MagicHealTarget,CurePotTarget,CureSpellTarget,MagicAtkTarget
 
-GuiHotkeysList = SelfKey,TargetKey,LastKey,SkillKey,SecondKey,NextTargetKey,CenterCamKey,BackpackKey,StopKey,EmergencyKey,LeftKey,RightKey,UpKey,DownKey,TamingKey,ReleaseKey,LoreKey,AllKillKey,AllStopKey,MusicKey,PeaceKey,ProvoKey,DiscordKey,BandagesKey,MagicHealKey,CurePotKey,CureSpellKey,HidingKey,FishingKey1,FishingKey2,FishingKey3,FishingKey4,FishingKey5,FishingKey6,FishingKey7,FishingKey8,FishingKey9,PhysicalKey,MagicAtkKey,Box1Key,Box2Key,GlassKey,LockpickKey
+GuiHotkeysList = SelfKey,TargetKey,LastKey,SkillKey,SecondKey,NextTargetKey,LastObjectKey,CenterCamKey,BackpackKey,StopKey,EmergencyKey,LeftKey,RightKey,UpKey,DownKey,TamingKey,ReleaseKey,LoreKey,AllKillKey,AllStopKey,MusicKey,PeaceKey,ProvoKey,DiscordKey,BandagesKey,MagicHealKey,CurePotKey,CureSpellKey,HidingKey,FishingKey1,FishingKey2,FishingKey3,FishingKey4,FishingKey5,FishingKey6,FishingKey7,FishingKey8,FishingKey9,PhysicalKey,MagicAtkKey,Box1Key,Box2Key,GlassKey,LockpickKey
 
-GuiLabelsList = OptionTitle,TabsList,ConfigLabel,ClientNameLabel,FromNameLabel,ToNameLabel,CharNumberLabel,SensLabel,SelfKeyLabel,TargetKeyLabel,LastKeyLabel,SkillKeyLabel,SecondKeyLabel,NextTargetKeyLabel,CenterCamKeyLabel,BackpackKeyLabel,KeyDelayLabel,LagDelayLabel,StopKeyLabel,EmergencyKeyLabel,UpKeyLabel,LeftKeyLabel,DownKeyLabel,RightKeyLabel,TamingKeyLabel,TamingDelayLabel,ReleaseKeyLabel,ReleaseDelayLabel,ReleaseSensLabel,LoreKeyLabel,LoreDelayLabel,AllKillKeyLabel,AllStopKeyLabel,VetDelayLabel,MusicKeyLabel,MusicDelayLabel,PeaceKeyLabel,PeaceDelayLabel,ProvoKeyLabel,ProvoDelayLabel,DiscordKeyLabel,DiscordDelayLabel,BandagesKeyLabel,MagicHealKeyLabel,CurePotLabel,CureSpellLabel,HealingDelayLabel,HidingKeyLabel,HidingDelayLabel,StepsLabel,FishingTotalLabel,FishingDelayLabel,FishingX1Label,FishingY1Label,FishingX2Label,FishingY2Label,FishingKey1Label,FishingKey2Label,FishingKey3Label,FishingKey4Label,FishingKey5Label,FishingKey6Label,FishingKey7Label,FishingKey8Label,FishingKey9Label,PhysicalKeyLabel,PhysicalDurationLabel,MagicAtkKeyLabel,OffensiveDelayLabel,LockpickKeyLabel,LockpickDelayLabel,Box1XLabel,Box1YLabel,Box1KeyLabel,Box2XLabel,Box2YLabel,Box2KeyLabel,LockpickingSensLabel,ItemIDSourceTLXLabel,ItemIDSourceTLYLabel,ItemIDSourceBRXLabel,ItemIDSourceBRYLabel,ItemIDContainerXLabel,ItemIDContainerYLabel,GlassKeyLabel,ItemIDSensLabel,ItemIDDelayLabel,CustomRoutineDelayLabel,HarvestingRoutineDelayLabel,HarvestSensLabel
+GuiLabelsList = OptionTitle,TabsList,ConfigLabel,ClientNameLabel,FromNameLabel,ToNameLabel,CharNumberLabel,SensLabel,SelfKeyLabel,TargetKeyLabel,LastKeyLabel,LastObjectLabel,SkillKeyLabel,SecondKeyLabel,NextTargetKeyLabel,CenterCamKeyLabel,BackpackKeyLabel,KeyDelayLabel,LagDelayLabel,StopKeyLabel,EmergencyKeyLabel,UpKeyLabel,LeftKeyLabel,DownKeyLabel,RightKeyLabel,TamingKeyLabel,TamingDelayLabel,ReleaseKeyLabel,ReleaseDelayLabel,ReleaseSensLabel,LoreKeyLabel,LoreDelayLabel,AllKillKeyLabel,AllStopKeyLabel,VetDelayLabel,MusicKeyLabel,MusicDelayLabel,PeaceKeyLabel,PeaceDelayLabel,ProvoKeyLabel,ProvoDelayLabel,DiscordKeyLabel,DiscordDelayLabel,BandagesKeyLabel,MagicHealKeyLabel,CurePotLabel,CureSpellLabel,HealingDelayLabel,HidingKeyLabel,HidingDelayLabel,StepsLabel,FishingTotalLabel,FishingDelayLabel,FishingX1Label,FishingY1Label,FishingX2Label,FishingY2Label,FishingKey1Label,FishingKey2Label,FishingKey3Label,FishingKey4Label,FishingKey5Label,FishingKey6Label,FishingKey7Label,FishingKey8Label,FishingKey9Label,PhysicalKeyLabel,PhysicalDurationLabel,MagicAtkKeyLabel,OffensiveDelayLabel,LockpickKeyLabel,LockpickDelayLabel,Box1XLabel,Box1YLabel,Box1KeyLabel,Box2XLabel,Box2YLabel,Box2KeyLabel,LockpickingSensLabel,ItemIDSourceTLXLabel,ItemIDSourceTLYLabel,ItemIDSourceBRXLabel,ItemIDSourceBRYLabel,ItemIDContainerXLabel,ItemIDContainerYLabel,GlassKeyLabel,ItemIDSensLabel,ItemIDDelayLabel,CustomRoutineDelayLabel,HarvestingRoutineDelayLabel,HarvestSensLabel
 
 GuiSetButtonsList = LoadedConfig,SetName,SetFishing,SetBox,SetSpotTarget,SetCustomCoordsItem,SetCustomCoordsTarget
 
@@ -224,6 +227,8 @@ Gui, Add, Text, x%Left% y%Line1% w%StdLabelWidth% Right vStopKeyLabel, Stop Key
 Gui, Add, Edit, xp+79 y%Line1Text% w%HotkeyWidth% vStopKey, F4
 Gui, Add, Text, xp+31 y%Line1% w%StdLabelWidth% Right vEmergencyKeyLabel, Emergency
 Gui, Add, Edit, xp+79 y%Line1Text% w%HotkeyWidth% vEmergencyKey, F5
+Gui, Add, Text, xp+31 y%Line1% w%StdLabelWidth% Right vLastObjectLabel, Last Object
+Gui, Add, Edit, xp+79 y%Line1Text% w%HotkeyWidth% vLastObjectKey,
 ;Targeting keys
 Gui, Add, Text, x%Left% y%Line2% w%StdLabelWidth% Right vSelfKeyLabel, Target Self
 Gui, Add, Edit, xp+79 y%Line2Text% w%HotkeyWidth% vSelfKey, g
@@ -560,7 +565,7 @@ Loop, %MaxCustom%
 	Gui, Add, Checkbox, x%Left% y%Line1% w%CheckBoxWidth% vCustom%A_Index%Active, Custom
 	Gui, Add, Text, xp+110 y%Line1% w%StdLabelWidth% Right vCustom%A_Index%KeyLabel, Skill Hotkey
 	Gui, Add, Edit, xp+79 y%Line1Text% w%HotkeyWidth% vCustom%A_Index%Key
-	Gui, Add, Dropdownlist, xp+31 y%Line1Text% w%CheckBoxWidth% AltSubmit vCustom%A_Index%Target, |Self|Current|Last
+	Gui, Add, Dropdownlist, xp+31 y%Line1Text% w%CheckBoxWidth% AltSubmit vCustom%A_Index%Target, |Self|Current|Last|Last Object
 
 	;Checkbox and double mouse click coords
 	Gui, Add, Checkbox, x%Left% y%Line2% vCustom%A_Index%CoordsItem, Use Coords
@@ -1440,8 +1445,7 @@ MAINLOOP:
 
 		if breakvar = 1
 			break
-				
-		
+	
 		;Healing
 		if (Bandages) {
 			GuiControl,,Routine, %RoutineMessage3%
@@ -1506,8 +1510,9 @@ MAINLOOP:
 		
 		if breakvar = 1
 			break
-		
-		Sleep %HealingDelay%
+
+		if (Bandages or MagicHeal or CurePot or CureSpell)
+			Sleep %HealingDelay%
 
 		if breakvar = 1
 			break
@@ -1918,6 +1923,8 @@ MAINLOOP:
 						SendHotkey(WinName,TargetKey)
 					else if (Custom%A_Index%Target = 4)
 						SendHotkey(WinName,LastKey)
+					else if (Custom%A_Index%Target = 5)
+						SendHotkey(WinName,LastObjectKey)
 				}
 				else
 				{
