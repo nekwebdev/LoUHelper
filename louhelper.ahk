@@ -9,9 +9,6 @@ CoordMode, Mouse, Window
 ; This is used because alt modifier would send the ctrl modifier as well. Check AHK docs.
 #MenuMaskKey vk07 
 
-;Add last object hotkey for custom routines target options.
-;Fixed error with healing sleep being applied to all routines.
-
 FileInstall, back.bmp, back.bmp
 FileInstall, character.bmp, character.bmp
 FileInstall, charplay.bmp, charplay.bmp
@@ -43,7 +40,7 @@ IniRead, MaxCustom, %TempConfig%, GuiSettings, MaxCustom
 IniRead, MaxCustomKeys, %TempConfig%, GuiSettings, MaxCustomKeys
 
 StringTrimRight, TempConfig, TempConfig, 4
-guiname := "LoU Helper v1.2 - " . TempConfig
+guiname := "LoU Helper v1.3 - " . TempConfig
 
 ;Get Routine Messages
 IniRead, RoutineMessages, config.ini, ConfigRoutineMessages
@@ -1858,7 +1855,7 @@ MAINLOOP:
 				Send, {LButton Up}
 				Sleep %LagDelay%
 				MouseMove, CenterX, CenterY, 0
-				Sleep 2000
+				Sleep 1500
 			}
 			Sleep %ItemIDDelay%
 		}
