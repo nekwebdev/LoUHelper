@@ -1971,6 +1971,7 @@ HarvestSpot(Window, WinWidth, WinHeight, HarvestRuneKey, HarvestScroll, HarvestS
 {
 	Global LagDelay
 	Global SkillKey
+	Global CenterCamKey
 	Global breakvar
 	Global HarvestSens
 	Global HarvestingRoutineDelay
@@ -1987,7 +1988,7 @@ HarvestSpot(Window, WinWidth, WinHeight, HarvestRuneKey, HarvestScroll, HarvestS
 		Sleep %LagDelay%
 	}
 	;Find a way to make sure you have recalled
-	Sleep %HarvestingRoutineDelay%   
+	Sleep %HarvestingRoutineDelay%
 	SendHotkey(Window,HarvestToolKey)
 	Sleep 3000
 	
