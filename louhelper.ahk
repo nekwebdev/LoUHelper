@@ -1938,7 +1938,17 @@ MAINLOOP:
 				if breakvar = 1
 					break
 				SleepCustomDelay := Custom%A_Index%PostDelay
-				Sleep %SleepCustomDelay%
+				
+				; breaks up the custom post delay for easier breaking during long sleeps
+				PostDelayLoopCount := Floor(SleepCustomDelay/1000)
+				PostDelaySleepRemainder := Mod(SleepCustomDelay, 1000)
+				Loop, %PostDelayLoopCount%
+				{
+					Sleep 1000
+					if breakvar = 1
+						break
+				}
+				Sleep %PostDelaySleepRemainder%
 			}
 			if breakvar = 1
 				break
