@@ -80,13 +80,13 @@ Loop, %MaxSpots%
 
 Loop, %MaxCustom%
 {
-	GuiSettingsList = %GuiSettingsList%,Custom%A_Index%Active,Custom%A_Index%CoordsItem,Custom%A_Index%CoordsTarget,Custom%A_Index%CoordsItemX,Custom%A_Index%CoordsItemY,Custom%A_Index%CoordsTargetX,Custom%A_Index%CoordsTargetY,Custom%A_Index%PreDelay,Custom%A_Index%PostDelay
+	GuiSettingsList = %GuiSettingsList%,Custom%A_Index%Active,Custom%A_Index%CoordsItem,Custom%A_Index%CoordsTarget,Custom%A_Index%CoordsRight,Custom%A_Index%CoordsItemX,Custom%A_Index%CoordsItemY,Custom%A_Index%CoordsTargetX,Custom%A_Index%CoordsTargetY,Custom%A_Index%CoordsRightX,Custom%A_Index%CoordsRightY,Custom%A_Index%PreDelay,Custom%A_Index%PostDelay
 	
 	GuiDPSettingsList = %GuiDPSettingsList%,Custom%A_Index%Target
 	
 	GuiHotkeysList = %GuiHotkeysList%,Custom%A_Index%Key
 	
-	GuiLabelsList = %GuiLabelsList%,Custom%A_Index%KeyLabel,Custom%A_Index%CoordsItemXLabel,Custom%A_Index%CoordsItemYLabel,Custom%A_Index%CoordsTargetXLabel,Custom%A_Index%CoordsTargetYLabel,Custom%A_Index%PreDelayLabel,Custom%A_Index%PostDelayLabel
+	GuiLabelsList = %GuiLabelsList%,Custom%A_Index%KeyLabel,Custom%A_Index%CoordsItemXLabel,Custom%A_Index%CoordsItemYLabel,Custom%A_Index%CoordsTargetXLabel,Custom%A_Index%CoordsTargetYLabel,Custom%A_Index%CoordsRightXLabel,Custom%A_Index%CoordsRightYLabel,Custom%A_Index%PreDelayLabel,Custom%A_Index%PostDelayLabel
 	
 	Tabs = %Tabs%|Custom%A_Index%
 }
@@ -580,11 +580,19 @@ Loop, %MaxCustom%
 	Gui, Add, Edit, xp+20 y%Line3Text% w%CoordWidth% vCustom%A_Index%CoordsTargetY
 	Gui, Add, Button, xp+40 y%Line3Set% w%SetButtonWidth% vSetCustom%A_Index%CoordsTarget gSetCustomCoordsTarget, Set
 
+	;Checkbox and right mouse click coords
+	Gui, Add, Checkbox, x%Left% y%Line4% vCustom%A_Index%CoordsRight, Right Click Coords
+	Gui, Add, Text, xp+172 y%Line4% w%CoordLabelWidth% vCustom%A_Index%CoordsRightXLabel, X
+	Gui, Add, Edit, xp+20 y%Line4Text% w%CoordWidth% vCustom%A_Index%CoordsRightX
+	Gui, Add, Text, xp+40 y%Line4% w%CoordLabelWidth% vCustom%A_Index%CoordsRightYLabel, Y
+	Gui, Add, Edit, xp+20 y%Line4Text% w%CoordWidth% vCustom%A_Index%CoordsRightY
+	Gui, Add, Button, xp+40 y%Line4Set% w%SetButtonWidth% vSetCustom%A_Index%CoordsRight gSetCustomCoordsRight, Set
+
 	;Delay After Using key
-	Gui, Add, Text, x%Left% y%Line4% w%DelayLabelWidth% Right vCustom%A_Index%PreDelayLabel, Pre Delay
-	Gui, Add, Edit, xp+72 y%Line4Text% w%DelayWidth% vCustom%A_Index%PreDelay
-	Gui, Add, Text, xp+148 y%Line4% w%DelayLabelWidth% Right vCustom%A_Index%PostDelayLabel, Post Delay
-	Gui, Add, Edit, xp+66 y%Line4Text% w%DelayWidth% vCustom%A_Index%PostDelay
+	Gui, Add, Text, x%Left% y%Line5% w%DelayLabelWidth% Right vCustom%A_Index%PreDelayLabel, Pre Delay
+	Gui, Add, Edit, xp+72 y%Line5Text% w%DelayWidth% vCustom%A_Index%PreDelay
+	Gui, Add, Text, xp+148 y%Line5% w%DelayLabelWidth% Right vCustom%A_Index%PostDelayLabel, Post Delay
+	Gui, Add, Edit, xp+66 y%Line5Text% w%DelayWidth% vCustom%A_Index%PostDelay
 }
 
 ;;Custom Keys
@@ -1138,10 +1146,13 @@ ADDCUSTOMTAB:
 		IniWrite, 0, %UserConfig%, GuiSettings, Custom%MaxCustom%Active
 		IniWrite, 0, %UserConfig%, GuiSettings, Custom%MaxCustom%CoordsItem
 		IniWrite, 0, %UserConfig%, GuiSettings, Custom%MaxCustom%CoordsTarget
+		IniWrite, 0, %UserConfig%, GuiSettings, Custom%MaxCustom%CoordsRight
 		IniWrite, 0, %UserConfig%, GuiSettings, Custom%MaxCustom%CoordsItemX
 		IniWrite, 0, %UserConfig%, GuiSettings, Custom%MaxCustom%CoordsItemY
 		IniWrite, 0, %UserConfig%, GuiSettings, Custom%MaxCustom%CoordsTargetX
 		IniWrite, 0, %UserConfig%, GuiSettings, Custom%MaxCustom%CoordsTargetY
+		IniWrite, 0, %UserConfig%, GuiSettings, Custom%MaxCustom%CoordsRightX
+		IniWrite, 0, %UserConfig%, GuiSettings, Custom%MaxCustom%CoordsRightY
 		IniWrite, 0, %UserConfig%, GuiSettings, Custom%MaxCustom%PreDelay
 		IniWrite, 0, %UserConfig%, GuiSettings, Custom%MaxCustom%PostDelay
 		IniWrite, % "", %UserConfig%, GuiSettings, Custom%MaxCustom%Target
@@ -1180,6 +1191,14 @@ SETCUSTOMCOORDSTARGET:
 	StringRight, CustomNum, CustomNumTemp, 1
 	XCoord = Custom%CustomNum%CoordsTargetX
 	YCoord = Custom%CustomNum%CoordsTargetY
+	SetGuiCoords(XCoord,YCoord,WinName)
+return
+
+SETCUSTOMCOORDSRIGHT:
+	StringLeft, CustomNumTemp, A_GuiControl, 10
+	StringRight, CustomNum, CustomNumTemp, 1
+	XCoord = Custom%CustomNum%CoordsRightX
+	YCoord = Custom%CustomNum%CoordsRightY
 	SetGuiCoords(XCoord,YCoord,WinName)
 return
 
@@ -1933,6 +1952,18 @@ MAINLOOP:
 					Send, {LButton Down}
 					Sleep 100
 					Send, {LButton Up}
+				}
+				; right click a specific coord
+				if (Custom%A_Index%CoordsRight)
+				{
+					;Right click Mouse
+					WinActivate, %WinName%
+					Sleep 100
+					MouseMove, Custom%A_Index%CoordsRightX, Custom%A_Index%CoordsRightY, 0
+					Sleep 50
+					Send, {RButton Down}
+					Sleep 100
+					Send, {RButton Up}					
 				}
 				Sleep %LagDelay%
 				if breakvar = 1
