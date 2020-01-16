@@ -7,7 +7,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 CoordMode, Mouse, Window
 ; This is used because alt modifier would send the ctrl modifier as well. Check AHK docs.
-#MenuMaskKey vk07 
+#MenuMaskKey vk07
 
 FileInstall, back.bmp, back.bmp
 FileInstall, character.bmp, character.bmp
@@ -19,7 +19,6 @@ FileInstall, ingame.bmp, ingame.bmp
 FileInstall, loultima.bmp, loultima.bmp
 FileInstall, okerror.bmp, okerror.bmp
 FileInstall, open.bmp, open.bmp
-FileInstall, play.bmp, play.bmp
 FileInstall, config.ini, config.ini
 FileInstall, default.ini, default.ini
 FileInstall, helper.ico, helper.ico
@@ -38,7 +37,6 @@ TempConfig := Configs%UserConfig%
 IniRead, MaxSpots, %TempConfig%, GuiSettings, MaxSpots
 IniRead, MaxCustom, %TempConfig%, GuiSettings, MaxCustom
 IniRead, MaxCustomKeys, %TempConfig%, GuiSettings, MaxCustomKeys
-
 StringTrimRight, TempConfig, TempConfig, 4
 guiname := "LoU Helper v1.4 - " . TempConfig
 
@@ -145,7 +143,7 @@ Line5Text := Line4Text + LineHeight
 Line5Set := Line5 - SetOffset
 
 TT := New GuiControlTips(HGUI)
-TT.SetDelayTimes(1000, 3000, -1)
+TT.SetDelayTimes(200, 3000, -1)
 
 Gui, Add, DropDownList, w%LeftColumnWidth% AltSubmit hwndHLoadedConfig vLoadedConfig gLoadConfigReload
 TT.Attach(HLoadedConfig, "Choose a custom profile")
@@ -205,8 +203,8 @@ TT.Attach(HWinName, "New name, this is the name that will be used by LoU Helper"
 Gui, Add, Button, xp+115 y%Line3Set% w%SetButtonWidth% hwndHSetName vSetName gSetName, Set
 TT.Attach(HSetName, "Set your LoA Client window to the new name")
 ;Auto-Relog
-Gui, Add, Checkbox, x%Left% y%Line4% w%CheckBoxWidth% hwndHAutoRelog vAutoRelog, Auto-Relog
-TT.Attach(HAutoRelog, "Activate the autorelog feature. Will make window active")
+Gui, Add, Checkbox, x%Left% y%Line4% w%CheckBoxWidth% hwndHAutoRelog vAutoRelog, Auto-Relog (warning)
+TT.Attach(HAutoRelog, "Activate the autorelog feature. Will make window active and block input each loop.")
 Gui, Add, Text, xp+110 y%Line4% w81 Right vCharNumberLabel, Character #
 Gui, Add, Edit, xp+86 y%Line4Text% w14 hwndHCharNumber vCharNumber, 1
 TT.Attach(HCharNumber, "Character number, 1 to 4, top to bottom")
@@ -1375,7 +1373,37 @@ MAINLOOP:
 			WinGet, winid ,, A
 			BlockInput, On
 			WinActivate, %WinName%
-			image_argument := "*" . Sens . " play.bmp"
+			image_argument := "*" . Sens . " steam_play.bmp"
+			ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, %image_argument%
+			if ErrorLevel = 1
+			{
+				;We are still in game
+				WinActivate, ahk_id %winid%
+				BlockInput, Off
+			}
+			else
+			{
+				;Need to relog
+				WinActivate, ahk_id %winid%
+				BlockInput, Off
+				CheckDelog(WinName,CharNumber)
+				if breakvar = 1
+					break
+				RelogCounter++
+				guicontrol,,RelogCounter, %RelogCounter%
+				Sleep 1000
+				WinActivate, %WinName%
+				Sleep 1000
+				
+				;Open Bag if lockpicking
+				if (Lockpicking)
+					SendHotkey(WinName,BackpackKey)
+				
+				;Target closest
+				if (Vet or Lore or Physical or MagicAtk)
+					SendHotkey(WinName,NextTargetKey)
+			}
+			image_argument := "*" . Sens . " leg_play.bmp"
 			ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, %image_argument%
 			if ErrorLevel = 1
 			{
@@ -2207,8 +2235,11 @@ CheckDelog(Window,Char)
 	Loop
 	{
 		WinActivate, %Window%
-		image_argument := "*" . Sens . " play.bmp"
-		if ImageClick(Window,Width,Height,image_argument)
+		image_argument1 := "*" . Sens . " steam_play.bmp"
+		image_argument2 := "*" . Sens . " leg_play.bmp"
+		if ImageClick(Window,Width,Height,image_argument1)
+			break
+		if ImageClick(Window,Width,Height,image_argument2)
 			break
 		Sleep 1000
 		
@@ -2254,8 +2285,9 @@ CheckDelog(Window,Char)
 		WinActivate, %Window%
 		image_argument := "*" . Sens . " community.bmp"
 		if ImageClick(Window,Width,Height,image_argument)
+		{
 			break
-		
+		}
 		;Look for the Connect Failed window
 		WinActivate, %Window%
 		image_argument := "*" . Sens . " okerror.bmp"
@@ -2286,37 +2318,6 @@ CheckDelog(Window,Char)
 	{
 		WinActivate, %Window%
 		image_argument := "*" . Sens . " loultima.bmp"
-		if ImageClick(Window,Width,Height,image_argument)
-			break
-		
-		WinActivate, %Window%
-		;Look for the Connect Failed window
-		image_argument := "*" . Sens . " okerror.bmp"
-		if ImageClick(Window,Width,Height,image_argument)
-			return CheckDelog(Window,Char)
-		
-		Sleep 1000
-		
-		i++
-		if (i > 60)
-		{
-			WinActivate, %Window%
-			;Timed out in a weird way, click back button and start over
-			image_argument := "*" . Sens . " back.bmp"
-			ImageClick(Window,Width,Height,image_argument)
-			Sleep 1000
-			return CheckDelog(Window,Char)
-		}
-		if breakvar = 1
-			return
-	}
-	
-	;Check that the server is OPEN
-	i := 0
-	Loop
-	{
-		WinActivate, %Window%
-		image_argument := "*20 open.bmp"
 		if ImageClick(Window,Width,Height,image_argument)
 			break
 		
@@ -2374,12 +2375,12 @@ CheckDelog(Window,Char)
 	}
 	
 	;Look for Character Box corner
-	Sleep 5000
+	Sleep 3000
 	Loop
 	{
 		WinActivate, %Window%
 		image_argument := "*60 character.bmp"
-		if ImageClick(Window,Width,Height,image_argument,,OffsetY)
+		if ImageClick(Window,Width,Height,image_argument,50,OffsetY)
 		{
 			Sleep 5000
 			break
