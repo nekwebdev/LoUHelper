@@ -38,7 +38,7 @@ IniRead, MaxSpots, %TempConfig%, GuiSettings, MaxSpots
 IniRead, MaxCustom, %TempConfig%, GuiSettings, MaxCustom
 IniRead, MaxCustomKeys, %TempConfig%, GuiSettings, MaxCustomKeys
 StringTrimRight, TempConfig, TempConfig, 4
-guiname := "LoU Helper v1.4 - " . TempConfig
+guiname := "LoU Helper v1.55 - " . TempConfig
 
 ;Get Routine Messages
 IniRead, RoutineMessages, config.ini, ConfigRoutineMessages
@@ -151,8 +151,8 @@ TT.Attach(HLoadedConfig, "Choose a custom profile")
 Gui, Add, TreeView, R1 h%SelectionHeight% w%LeftColumnWidth% -0x4 AltSubmit -Buttons gTVLabel
 	P1 := TV_Add("General",,"Expand")
 	P2 := TV_Add("Hotkeys")
-	;P3 := TV_Add("Taming")
-	;P4 := TV_Add("Music")
+	P3 := TV_Add("Taming")
+	P4 := TV_Add("Music")
 	P5 := TV_Add("Healing")
 	P6 := TV_Add("Hiding")
 	P7 := TV_Add("Fishing")
