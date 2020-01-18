@@ -1650,6 +1650,11 @@ MAINLOOP:
 			Sleep %LagDelay%
 			SendHotkey(WinName,TargetKey)
 			Sleep %LagDelay%
+			SendHotkey(WinName,NextTargetKey)
+			Sleep %LagDelay%
+			SendHotkey(WinName,NextTargetKey)
+			Sleep %LagDelay%
+			SendHotkey(WinName,TargetKey)
 			Sleep %ProvoDelay%
 		}
 		else if (Peace)
