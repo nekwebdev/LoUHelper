@@ -19,12 +19,9 @@ FileInstall, ingame.bmp, ingame.bmp
 FileInstall, loultima.bmp, loultima.bmp
 FileInstall, okerror.bmp, okerror.bmp
 FileInstall, open.bmp, open.bmp
-FileInstall, play.bmp, play.bmp
-FileInstall, Items.bmp, Items.bmp
 FileInstall, config.ini, config.ini
 FileInstall, default.ini, default.ini
 FileInstall, helper.ico, helper.ico
-FileInstall, Legacy Play.bmp, Legacy Play.bmp
 
 ;Set our icon.
 Menu, Tray, Icon, Helper.ico
@@ -40,9 +37,8 @@ TempConfig := Configs%UserConfig%
 IniRead, MaxSpots, %TempConfig%, GuiSettings, MaxSpots
 IniRead, MaxCustom, %TempConfig%, GuiSettings, MaxCustom
 IniRead, MaxCustomKeys, %TempConfig%, GuiSettings, MaxCustomKeys
-
 StringTrimRight, TempConfig, TempConfig, 4
-guiname := "LoU Helper v1.4 - " . TempConfig
+guiname := "LoU Helper v1.55 - " . TempConfig
 
 ;Get Routine Messages
 IniRead, RoutineMessages, config.ini, ConfigRoutineMessages
@@ -55,13 +51,13 @@ Loop Parse, RoutineMessages, `n
 ;Lists of settings to iterate
 Tabs = General|GeneralKeys|Taming|Music|Healing|Hiding|Fishing|Offensive|Lockpicking|Custom|Harvesting|ItemID|CustomKeys
 
-GuiSettingsList = ACC,OnTop,FromName,WinName,AutoRelog,CharNumber,Sens,LagDelay,KeyDelay,Taming,TamingDelay,Release,ReleaseDelay,ReleaseSens,Lore,LoreDelay,Vet,VetDelay,Music,MusicDelay,Peace,PeaceDelay,Provo,ProvoDelay,Discord,DiscordDelay,Bandages,MagicHeal,CurePot,CureSpell,HealingDelay,Hiding,Stealth,Steps,HidingDelay,Fishing,FishingDelay,FishingX1,FishingY1,Fishing2,FishingX2,FishingY2,FishingTotal,Physical,PhysicalDuration,MagicAtk,DoubleTarget,OffensiveDelay,Lockpicking,LockpickDelay,Box1X,Box1Y,Lockpicking2,Box2X,Box2Y,LockpickingSens,ItemID,ItemIDSourceTLX,ItemIDSourceTLY,ItemIDSourceBRX,ItemIDSourceBRY,ItemIDContainerX,ItemIDContainerY,ItemIDSens,ItemIDDelay,CustomRoutineDelay,HarvestingRoutineDelay,HarvestSens
+GuiSettingsList = survey,OnTop,FromName,WinName,AutoRelog,CharNumber,Sens,LagDelay,KeyDelay,Taming,TamingDelay,Release,ReleaseDelay,ReleaseSens,Lore,LoreDelay,Vet,VetDelay,Music,MusicDelay,Peace,PeaceDelay,Provo,ProvoDelay,Discord,DiscordDelay,Bandages,MagicHeal,CurePot,CureSpell,HealingDelay,Hiding,Stealth,Steps,HidingDelay,Fishing,FishingDelay,FishingX1,FishingY1,Fishing2,FishingX2,FishingY2,FishingTotal,Physical,PhysicalDuration,MagicAtk,DoubleTarget,OffensiveDelay,Lockpicking,LockpickDelay,Box1X,Box1Y,Lockpicking2,Box2X,Box2Y,LockpickingSens,ItemID,ItemIDSourceTLX,ItemIDSourceTLY,ItemIDSourceBRX,ItemIDSourceBRY,ItemIDContainerX,ItemIDContainerY,ItemIDSens,ItemIDDelay,CustomRoutineDelay,HarvestingRoutineDelay,HarvestSens
 
 GuiDPSettingsList = BandagesTarget,MagicHealTarget,CurePotTarget,CureSpellTarget,MagicAtkTarget
 
-GuiHotkeysList = SelfKey,TargetKey,LastKey,SkillKey,SecondKey,NextTargetKey,LastObjectKey,CenterCamKey,BackpackKey,StopKey,EmergencyKey,LeftKey,RightKey,UpKey,DownKey,TamingKey,ReleaseKey,LoreKey,AllKillKey,AllStopKey,MusicKey,PeaceKey,ProvoKey,DiscordKey,BandagesKey,MagicHealKey,CurePotKey,CureSpellKey,HidingKey,FishingKey1,FishingKey2,FishingKey3,FishingKey4,FishingKey5,FishingKey6,FishingKey7,FishingKey8,FishingKey9,PhysicalKey,MagicAtkKey,Box1Key,Box2Key,GlassKey,LockpickKey
+GuiHotkeysList = Surveykey,SelfKey,TargetKey,LastKey,SkillKey,SecondKey,NextTargetKey,LastObjectKey,CenterCamKey,BackpackKey,StopKey,EmergencyKey,LeftKey,RightKey,UpKey,DownKey,TamingKey,ReleaseKey,LoreKey,AllKillKey,AllStopKey,MusicKey,PeaceKey,ProvoKey,DiscordKey,BandagesKey,MagicHealKey,CurePotKey,CureSpellKey,HidingKey,FishingKey1,FishingKey2,FishingKey3,FishingKey4,FishingKey5,FishingKey6,FishingKey7,FishingKey8,FishingKey9,PhysicalKey,MagicAtkKey,Box1Key,Box2Key,GlassKey,LockpickKey
 
-GuiLabelsList = ACCLabel,OptionTitle,TabsList,ConfigLabel,ClientNameLabel,FromNameLabel,ToNameLabel,CharNumberLabel,SensLabel,SelfKeyLabel,TargetKeyLabel,LastKeyLabel,LastObjectLabel,SkillKeyLabel,SecondKeyLabel,NextTargetKeyLabel,CenterCamKeyLabel,BackpackKeyLabel,KeyDelayLabel,LagDelayLabel,StopKeyLabel,EmergencyKeyLabel,UpKeyLabel,LeftKeyLabel,DownKeyLabel,RightKeyLabel,TamingKeyLabel,TamingDelayLabel,ReleaseKeyLabel,ReleaseDelayLabel,ReleaseSensLabel,LoreKeyLabel,LoreDelayLabel,AllKillKeyLabel,AllStopKeyLabel,VetDelayLabel,MusicKeyLabel,MusicDelayLabel,PeaceKeyLabel,PeaceDelayLabel,ProvoKeyLabel,ProvoDelayLabel,DiscordKeyLabel,DiscordDelayLabel,BandagesKeyLabel,MagicHealKeyLabel,CurePotLabel,CureSpellLabel,HealingDelayLabel,HidingKeyLabel,HidingDelayLabel,StepsLabel,FishingTotalLabel,FishingDelayLabel,FishingX1Label,FishingY1Label,FishingX2Label,FishingY2Label,FishingKey1Label,FishingKey2Label,FishingKey3Label,FishingKey4Label,FishingKey5Label,FishingKey6Label,FishingKey7Label,FishingKey8Label,FishingKey9Label,PhysicalKeyLabel,PhysicalDurationLabel,MagicAtkKeyLabel,OffensiveDelayLabel,LockpickKeyLabel,LockpickDelayLabel,Box1XLabel,Box1YLabel,Box1KeyLabel,Box2XLabel,Box2YLabel,Box2KeyLabel,LockpickingSensLabel,ItemIDSourceTLXLabel,ItemIDSourceTLYLabel,ItemIDSourceBRXLabel,ItemIDSourceBRYLabel,ItemIDContainerXLabel,ItemIDContainerYLabel,GlassKeyLabel,ItemIDSensLabel,ItemIDDelayLabel,CustomRoutineDelayLabel,HarvestingRoutineDelayLabel,HarvestSensLabel
+GuiLabelsList = SurveyLabel,OptionTitle,TabsList,ConfigLabel,ClientNameLabel,FromNameLabel,ToNameLabel,CharNumberLabel,SensLabel,SelfKeyLabel,TargetKeyLabel,LastKeyLabel,LastObjectLabel,SkillKeyLabel,SecondKeyLabel,NextTargetKeyLabel,CenterCamKeyLabel,BackpackKeyLabel,KeyDelayLabel,LagDelayLabel,StopKeyLabel,EmergencyKeyLabel,UpKeyLabel,LeftKeyLabel,DownKeyLabel,RightKeyLabel,TamingKeyLabel,TamingDelayLabel,ReleaseKeyLabel,ReleaseDelayLabel,ReleaseSensLabel,LoreKeyLabel,LoreDelayLabel,AllKillKeyLabel,AllStopKeyLabel,VetDelayLabel,MusicKeyLabel,MusicDelayLabel,PeaceKeyLabel,PeaceDelayLabel,ProvoKeyLabel,ProvoDelayLabel,DiscordKeyLabel,DiscordDelayLabel,BandagesKeyLabel,MagicHealKeyLabel,CurePotLabel,CureSpellLabel,HealingDelayLabel,HidingKeyLabel,HidingDelayLabel,StepsLabel,FishingTotalLabel,FishingDelayLabel,FishingX1Label,FishingY1Label,FishingX2Label,FishingY2Label,FishingKey1Label,FishingKey2Label,FishingKey3Label,FishingKey4Label,FishingKey5Label,FishingKey6Label,FishingKey7Label,FishingKey8Label,FishingKey9Label,PhysicalKeyLabel,PhysicalDurationLabel,MagicAtkKeyLabel,OffensiveDelayLabel,LockpickKeyLabel,LockpickDelayLabel,Box1XLabel,Box1YLabel,Box1KeyLabel,Box2XLabel,Box2YLabel,Box2KeyLabel,LockpickingSensLabel,ItemIDSourceTLXLabel,ItemIDSourceTLYLabel,ItemIDSourceBRXLabel,ItemIDSourceBRYLabel,ItemIDContainerXLabel,ItemIDContainerYLabel,GlassKeyLabel,ItemIDSensLabel,ItemIDDelayLabel,CustomRoutineDelayLabel,HarvestingRoutineDelayLabel,HarvestSensLabel
 
 GuiSetButtonsList = LoadedConfig,SetName,SetFishing,SetBox,SetSpotTarget,SetCustomCoordsItem,SetCustomCoordsTarget
 
@@ -147,7 +143,7 @@ Line5Text := Line4Text + LineHeight
 Line5Set := Line5 - SetOffset
 
 TT := New GuiControlTips(HGUI)
-TT.SetDelayTimes(1000, 3000, -1)
+TT.SetDelayTimes(200, 3000, -1)
 
 Gui, Add, DropDownList, w%LeftColumnWidth% AltSubmit hwndHLoadedConfig vLoadedConfig gLoadConfigReload
 TT.Attach(HLoadedConfig, "Choose a custom profile")
@@ -155,8 +151,8 @@ TT.Attach(HLoadedConfig, "Choose a custom profile")
 Gui, Add, TreeView, R1 h%SelectionHeight% w%LeftColumnWidth% -0x4 AltSubmit -Buttons gTVLabel
 	P1 := TV_Add("General",,"Expand")
 	P2 := TV_Add("Hotkeys")
-	;P3 := TV_Add("Taming")
-	;P4 := TV_Add("Music")
+	P3 := TV_Add("Taming")
+	P4 := TV_Add("Music")
 	P5 := TV_Add("Healing")
 	P6 := TV_Add("Hiding")
 	P7 := TV_Add("Fishing")
@@ -195,9 +191,6 @@ Gui, Add, Tab2, xp yp w0 h0 -Wrap vTabsList, %Tabs%
 Gui, Tab, General
 
 Gui, Add, Checkbox, x%Left% y%Line1% hwndHOnTop vOnTop gOnTop, Window always on top
-Gui, Add, Text, xp+145 y%Line1% w%HotkeyWidth% Right vACCLabel, ACC
-Gui, Add, Edit, xp+26 y%Line1Text% w%ClientNameWidth% hwndHWinName vACC, 0
-
 TT.Attach(HOnTop, "Keep LoU Helper window always on top")
 ;Change Window name
 Gui, Add, Text, x%Left% y%Line2% w%SettingsWidthInside% Center hwndHClientNameLabel vClientNameLabel, Change the client window name:
@@ -210,8 +203,8 @@ TT.Attach(HWinName, "New name, this is the name that will be used by LoU Helper"
 Gui, Add, Button, xp+115 y%Line3Set% w%SetButtonWidth% hwndHSetName vSetName gSetName, Set
 TT.Attach(HSetName, "Set your LoA Client window to the new name")
 ;Auto-Relog
-Gui, Add, Checkbox, x%Left% y%Line4% w%CheckBoxWidth% hwndHAutoRelog vAutoRelog, Auto-Relog
-TT.Attach(HAutoRelog, "Activate the autorelog feature. Will make window active")
+Gui, Add, Checkbox, x%Left% y%Line4% w%CheckBoxWidth% hwndHAutoRelog vAutoRelog, Auto-Relog (warning)
+TT.Attach(HAutoRelog, "Activate the autorelog feature. Will make window active and block input each loop.")
 Gui, Add, Text, xp+110 y%Line4% w81 Right vCharNumberLabel, Character #
 Gui, Add, Edit, xp+86 y%Line4Text% w14 hwndHCharNumber vCharNumber, 1
 TT.Attach(HCharNumber, "Character number, 1 to 4, top to bottom")
@@ -491,6 +484,11 @@ Gui, Add, Edit, xp+72 y%Line5Text% w%DelayWidth% vItemIDDelay
 Gui, Tab, Harvesting
 Gui, Add, Text, x%Left% y0 w0
 Gui, Add, Button, xp+60 y%Line1Set% w200 vAddSpotTab gAddSpotTab, Add a new harvesting spot
+Gui, Add, Text, x%Left% y0 w0
+Gui, Add, Checkbox, x%Left% y%Line2% vSurvey, Survey
+Gui, Add, Text, xp+25 y%Line2% w200 Right vSurveyLabel, Survey tool
+Gui, Add, Edit, xp+205 y%Line2Text% w50 vSurveykey
+Gui, Add, Text, x%Left% y0 w0
 Gui, Add, Button, xp y%Line3Set% w200 vRemoveSpotTab gRemoveSpotTab, Remove last harvesting spot
 Gui, Add, Text, x%Left% y0 w0
 Gui, Add, Text, xp+25 y%Line4% w200 Right vHarvestSensLabel, Tolerance for image searching
@@ -1380,50 +1378,17 @@ MAINLOOP:
 			WinGet, winid ,, A
 			BlockInput, On
 			WinActivate, %WinName%
-			image_argument := "*" . Sens . " play.bmp"
+			image_argument := "*" . Sens . " steam_play.bmp"
 			ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, %image_argument%
 			if ErrorLevel = 1
 			{
-				image_argument := "*" . Sens . " Legacy play.bmp"
-				ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, %image_argument%
-				if ErrorLevel = 1
-				{
-					;We are still in game - Steam
-					WinActivate, ahk_id %winid%
-					BlockInput, Off
-				}
-				else
-				{
-					WinActivate, ahk_id %winid%
-					BlockInput, Off
-					CheckDelog(WinName,CharNumber)
-					if breakvar = 1
-						break
-					RelogCounter++
-					guicontrol,,RelogCounter, %RelogCounter%
-					Sleep 1000
-					WinActivate, %WinName%
-					Sleep 1000
-
-					;Open Bag if lockpicking
-					if (Lockpicking)
-						SendHotkey(WinName,BackpackKey)
-
-					;Target closest
-					if (Vet or Lore or Physical or MagicAtk)
-						SendHotkey(WinName,NextTargetKey)
-					}
-			}
-			image_argument := "*" . Sens . " play.bmp"
-			ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, %image_argument%
-			if ErrorLevel = 1
-			{
-				;We are still in game - Steam
+				;We are still in game
 				WinActivate, ahk_id %winid%
 				BlockInput, Off
 			}
 			else
 			{
+				;Need to relog
 				WinActivate, ahk_id %winid%
 				BlockInput, Off
 				CheckDelog(WinName,CharNumber)
@@ -1442,7 +1407,37 @@ MAINLOOP:
 				;Target closest
 				if (Vet or Lore or Physical or MagicAtk)
 					SendHotkey(WinName,NextTargetKey)
-				}
+			}
+			image_argument := "*" . Sens . " leg_play.bmp"
+			ImageSearch, FoundX, FoundY, 0, 0, %Width%, %Height%, %image_argument%
+			if ErrorLevel = 1
+			{
+				;We are still in game
+				WinActivate, ahk_id %winid%
+				BlockInput, Off
+			}
+			else
+			{
+				;Need to relog
+				WinActivate, ahk_id %winid%
+				BlockInput, Off
+				CheckDelog(WinName,CharNumber)
+				if breakvar = 1
+					break
+				RelogCounter++
+				guicontrol,,RelogCounter, %RelogCounter%
+				Sleep 1000
+				WinActivate, %WinName%
+				Sleep 1000
+
+				;Open Bag if lockpicking
+				if (Lockpicking)
+					SendHotkey(WinName,BackpackKey)
+
+				;Target closest
+				if (Vet or Lore or Physical or MagicAtk)
+					SendHotkey(WinName,NextTargetKey)
+			}
 		}
 
 		if breakvar = 1
@@ -1660,6 +1655,11 @@ MAINLOOP:
 			Sleep %LagDelay%
 			SendHotkey(WinName,TargetKey)
 			Sleep %LagDelay%
+			SendHotkey(WinName,NextTargetKey)
+			Sleep %LagDelay%
+			SendHotkey(WinName,NextTargetKey)
+			Sleep %LagDelay%
+			SendHotkey(WinName,TargetKey)
 			Sleep %ProvoDelay%
 		}
 		else if (Peace)
@@ -2054,6 +2054,8 @@ HarvestSpot(Window, WinWidth, WinHeight, HarvestRuneKey, HarvestScroll, HarvestS
 	Global breakvar
 	Global HarvestSens
 	Global HarvestingRoutineDelay
+	Global Surveykey
+	Global Survey
 
 	if breakvar = 1
 		return
@@ -2099,6 +2101,17 @@ HarvestSpot(Window, WinWidth, WinHeight, HarvestRuneKey, HarvestScroll, HarvestS
 			Sleep 100
 			if breakvar = 1
 				return
+			;Try survey
+			IF(survey)
+			{
+				SendHotkey(Window,Surveykey)
+				MouseMove, HarvestCoords[i][1], HarvestCoords[i][2], 0
+				Sleep %LagDelay%
+				Send, {LButton Down}
+				Sleep 100
+				Send, {LButton Up}
+			}
+
 			;Look for the Charge bar
 			WinActivate, %Window%
 			image_argument := "*" . HarvestSens . " charge.bmp"
@@ -2236,31 +2249,25 @@ CheckDelog(Window,Char)
 {
 	Global Sens
 	Global breakvar
-	Global PW
 	WinActivate, %Window%
 	WinGetPos, X, Y, Width, Height, %Window%
-	OffsetY := 50 * (Char - 1)+10
+	OffsetY := 43 * (Char - 1)
 
 	;Look for the title screen play button
 	i := 0
 	Loop
 	{
 		WinActivate, %Window%
-		;image_argument := "*" . Sens . " Legacy-1.bmp"
-		;if ImageClick(Window,Width,Height,image_argument)
-		sleep 1000
-		;controlSenD,,%PW%,%Window%
-		Send %PW%
-		sleep 1000
-		image_argument := "*" . Sens . " play.bmp"
-		if ImageClick(Window,Width,Height,image_argument)
+		image_argument1 := "*" . Sens . " steam_play.bmp"
+		image_argument2 := "*" . Sens . " leg_play.bmp"
+		if ImageClick(Window,Width,Height,image_argument1)
 			break
-		Sleep 500
-		image_argument := "*" . Sens . " Legacy play.bmp"
-		if ImageClick(Window,Width,Height,image_argument)
+		if ImageClick(Window,Width,Height,image_argument2)
 			break
+		Sleep 1000
+
 		i++
-		if (i > 15)
+		if (i > 60)
 		{
 			WinActivate, %Window%
 			;Look for the Ok button in an error window
@@ -2291,7 +2298,6 @@ CheckDelog(Window,Char)
 
 	;Play button was present and clicked
 	;Move mouse out of the way
- Next:
 	Sleep 100
 	MouseMove,Width/2,Height/2
 
@@ -2302,8 +2308,9 @@ CheckDelog(Window,Char)
 		WinActivate, %Window%
 		image_argument := "*" . Sens . " community.bmp"
 		if ImageClick(Window,Width,Height,image_argument)
+		{
 			break
-
+		}
 		;Look for the Connect Failed window
 		WinActivate, %Window%
 		image_argument := "*" . Sens . " okerror.bmp"
@@ -2313,7 +2320,7 @@ CheckDelog(Window,Char)
 		Sleep 1000
 
 		i++
-		if (i > 15)
+		if (i > 60)
 		{
 			WinActivate, %Window%
 			;Timed out in a weird way, click back button and start over
@@ -2346,7 +2353,7 @@ CheckDelog(Window,Char)
 		Sleep 1000
 
 		i++
-		if (i > 15)
+		if (i > 60)
 		{
 			WinActivate, %Window%
 			;Timed out in a weird way, click back button and start over
@@ -2358,7 +2365,6 @@ CheckDelog(Window,Char)
 		if breakvar = 1
 			return
 	}
-
 
 	;Look for Enter World button
 	i := 0
@@ -2378,7 +2384,7 @@ CheckDelog(Window,Char)
 		Sleep 1000
 
 		i++
-		if (i > 15)
+		if (i > 60)
 		{
 			WinActivate, %Window%
 			;Timed out in a weird way, click back button and start over
@@ -2392,12 +2398,12 @@ CheckDelog(Window,Char)
 	}
 
 	;Look for Character Box corner
-	Sleep 5000
+	Sleep 3000
 	Loop
 	{
 		WinActivate, %Window%
 		image_argument := "*60 character.bmp"
-		if ImageClick(Window,Width,Height,image_argument,60,OffsetY)
+		if ImageClick(Window,Width,Height,image_argument,50,OffsetY)
 		{
 			Sleep 5000
 			break
@@ -2405,7 +2411,7 @@ CheckDelog(Window,Char)
 		Sleep 1000
 
 		i++
-		if (i > 15)
+		if (i > 60)
 		{
 			WinActivate, %Window%
 			;Look for the Ok button in an error window
