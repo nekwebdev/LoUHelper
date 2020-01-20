@@ -51,13 +51,13 @@ Loop Parse, RoutineMessages, `n
 ;Lists of settings to iterate
 Tabs = General|GeneralKeys|Taming|Music|Healing|Hiding|Fishing|Offensive|Lockpicking|Custom|Harvesting|ItemID|CustomKeys
 
-GuiSettingsList = OnTop,FromName,WinName,AutoRelog,CharNumber,Sens,LagDelay,KeyDelay,Taming,TamingDelay,Release,ReleaseDelay,ReleaseSens,Lore,LoreDelay,Vet,VetDelay,Music,MusicDelay,Peace,PeaceDelay,Provo,ProvoDelay,Discord,DiscordDelay,Bandages,MagicHeal,CurePot,CureSpell,HealingDelay,Hiding,Stealth,Steps,HidingDelay,Fishing,FishingDelay,FishingX1,FishingY1,Fishing2,FishingX2,FishingY2,FishingTotal,Physical,PhysicalDuration,MagicAtk,DoubleTarget,OffensiveDelay,Lockpicking,LockpickDelay,Box1X,Box1Y,Lockpicking2,Box2X,Box2Y,LockpickingSens,ItemID,ItemIDSourceTLX,ItemIDSourceTLY,ItemIDSourceBRX,ItemIDSourceBRY,ItemIDContainerX,ItemIDContainerY,ItemIDSens,ItemIDDelay,CustomRoutineDelay,HarvestingRoutineDelay,HarvestSens
+GuiSettingsList = survey,OnTop,FromName,WinName,AutoRelog,CharNumber,Sens,LagDelay,KeyDelay,Taming,TamingDelay,Release,ReleaseDelay,ReleaseSens,Lore,LoreDelay,Vet,VetDelay,Music,MusicDelay,Peace,PeaceDelay,Provo,ProvoDelay,Discord,DiscordDelay,Bandages,MagicHeal,CurePot,CureSpell,HealingDelay,Hiding,Stealth,Steps,HidingDelay,Fishing,FishingDelay,FishingX1,FishingY1,Fishing2,FishingX2,FishingY2,FishingTotal,Physical,PhysicalDuration,MagicAtk,DoubleTarget,OffensiveDelay,Lockpicking,LockpickDelay,Box1X,Box1Y,Lockpicking2,Box2X,Box2Y,LockpickingSens,ItemID,ItemIDSourceTLX,ItemIDSourceTLY,ItemIDSourceBRX,ItemIDSourceBRY,ItemIDContainerX,ItemIDContainerY,ItemIDSens,ItemIDDelay,CustomRoutineDelay,HarvestingRoutineDelay,HarvestSens
 
 GuiDPSettingsList = BandagesTarget,MagicHealTarget,CurePotTarget,CureSpellTarget,MagicAtkTarget
 
-GuiHotkeysList = SelfKey,TargetKey,LastKey,SkillKey,SecondKey,NextTargetKey,LastObjectKey,CenterCamKey,BackpackKey,StopKey,EmergencyKey,LeftKey,RightKey,UpKey,DownKey,TamingKey,ReleaseKey,LoreKey,AllKillKey,AllStopKey,MusicKey,PeaceKey,ProvoKey,DiscordKey,BandagesKey,MagicHealKey,CurePotKey,CureSpellKey,HidingKey,FishingKey1,FishingKey2,FishingKey3,FishingKey4,FishingKey5,FishingKey6,FishingKey7,FishingKey8,FishingKey9,PhysicalKey,MagicAtkKey,Box1Key,Box2Key,GlassKey,LockpickKey
+GuiHotkeysList = Surveykey,SelfKey,TargetKey,LastKey,SkillKey,SecondKey,NextTargetKey,LastObjectKey,CenterCamKey,BackpackKey,StopKey,EmergencyKey,LeftKey,RightKey,UpKey,DownKey,TamingKey,ReleaseKey,LoreKey,AllKillKey,AllStopKey,MusicKey,PeaceKey,ProvoKey,DiscordKey,BandagesKey,MagicHealKey,CurePotKey,CureSpellKey,HidingKey,FishingKey1,FishingKey2,FishingKey3,FishingKey4,FishingKey5,FishingKey6,FishingKey7,FishingKey8,FishingKey9,PhysicalKey,MagicAtkKey,Box1Key,Box2Key,GlassKey,LockpickKey
 
-GuiLabelsList = OptionTitle,TabsList,ConfigLabel,ClientNameLabel,FromNameLabel,ToNameLabel,CharNumberLabel,SensLabel,SelfKeyLabel,TargetKeyLabel,LastKeyLabel,LastObjectLabel,SkillKeyLabel,SecondKeyLabel,NextTargetKeyLabel,CenterCamKeyLabel,BackpackKeyLabel,KeyDelayLabel,LagDelayLabel,StopKeyLabel,EmergencyKeyLabel,UpKeyLabel,LeftKeyLabel,DownKeyLabel,RightKeyLabel,TamingKeyLabel,TamingDelayLabel,ReleaseKeyLabel,ReleaseDelayLabel,ReleaseSensLabel,LoreKeyLabel,LoreDelayLabel,AllKillKeyLabel,AllStopKeyLabel,VetDelayLabel,MusicKeyLabel,MusicDelayLabel,PeaceKeyLabel,PeaceDelayLabel,ProvoKeyLabel,ProvoDelayLabel,DiscordKeyLabel,DiscordDelayLabel,BandagesKeyLabel,MagicHealKeyLabel,CurePotLabel,CureSpellLabel,HealingDelayLabel,HidingKeyLabel,HidingDelayLabel,StepsLabel,FishingTotalLabel,FishingDelayLabel,FishingX1Label,FishingY1Label,FishingX2Label,FishingY2Label,FishingKey1Label,FishingKey2Label,FishingKey3Label,FishingKey4Label,FishingKey5Label,FishingKey6Label,FishingKey7Label,FishingKey8Label,FishingKey9Label,PhysicalKeyLabel,PhysicalDurationLabel,MagicAtkKeyLabel,OffensiveDelayLabel,LockpickKeyLabel,LockpickDelayLabel,Box1XLabel,Box1YLabel,Box1KeyLabel,Box2XLabel,Box2YLabel,Box2KeyLabel,LockpickingSensLabel,ItemIDSourceTLXLabel,ItemIDSourceTLYLabel,ItemIDSourceBRXLabel,ItemIDSourceBRYLabel,ItemIDContainerXLabel,ItemIDContainerYLabel,GlassKeyLabel,ItemIDSensLabel,ItemIDDelayLabel,CustomRoutineDelayLabel,HarvestingRoutineDelayLabel,HarvestSensLabel
+GuiLabelsList = SurveyLabel,OptionTitle,TabsList,ConfigLabel,ClientNameLabel,FromNameLabel,ToNameLabel,CharNumberLabel,SensLabel,SelfKeyLabel,TargetKeyLabel,LastKeyLabel,LastObjectLabel,SkillKeyLabel,SecondKeyLabel,NextTargetKeyLabel,CenterCamKeyLabel,BackpackKeyLabel,KeyDelayLabel,LagDelayLabel,StopKeyLabel,EmergencyKeyLabel,UpKeyLabel,LeftKeyLabel,DownKeyLabel,RightKeyLabel,TamingKeyLabel,TamingDelayLabel,ReleaseKeyLabel,ReleaseDelayLabel,ReleaseSensLabel,LoreKeyLabel,LoreDelayLabel,AllKillKeyLabel,AllStopKeyLabel,VetDelayLabel,MusicKeyLabel,MusicDelayLabel,PeaceKeyLabel,PeaceDelayLabel,ProvoKeyLabel,ProvoDelayLabel,DiscordKeyLabel,DiscordDelayLabel,BandagesKeyLabel,MagicHealKeyLabel,CurePotLabel,CureSpellLabel,HealingDelayLabel,HidingKeyLabel,HidingDelayLabel,StepsLabel,FishingTotalLabel,FishingDelayLabel,FishingX1Label,FishingY1Label,FishingX2Label,FishingY2Label,FishingKey1Label,FishingKey2Label,FishingKey3Label,FishingKey4Label,FishingKey5Label,FishingKey6Label,FishingKey7Label,FishingKey8Label,FishingKey9Label,PhysicalKeyLabel,PhysicalDurationLabel,MagicAtkKeyLabel,OffensiveDelayLabel,LockpickKeyLabel,LockpickDelayLabel,Box1XLabel,Box1YLabel,Box1KeyLabel,Box2XLabel,Box2YLabel,Box2KeyLabel,LockpickingSensLabel,ItemIDSourceTLXLabel,ItemIDSourceTLYLabel,ItemIDSourceBRXLabel,ItemIDSourceBRYLabel,ItemIDContainerXLabel,ItemIDContainerYLabel,GlassKeyLabel,ItemIDSensLabel,ItemIDDelayLabel,CustomRoutineDelayLabel,HarvestingRoutineDelayLabel,HarvestSensLabel
 
 GuiSetButtonsList = LoadedConfig,SetName,SetFishing,SetBox,SetSpotTarget,SetCustomCoordsItem,SetCustomCoordsTarget
 
@@ -68,41 +68,41 @@ LockpickingOptionsList = Lockpicking2,Box2XLabel,Box2X,Box2YLabel,Box2Y,SetBox2
 Loop, %MaxSpots%
 {
 	GuiSettingsList = %GuiSettingsList%,Spot%A_Index%Active,Spot%A_Index%Scroll,Spot%A_Index%X1,Spot%A_Index%Y1,Spot%A_Index%X2,Spot%A_Index%Y2,Spot%A_Index%X3,Spot%A_Index%Y3,Spot%A_Index%X4,Spot%A_Index%Y4,Spot%A_Index%X5,Spot%A_Index%Y5,Spot%A_Index%X6,Spot%A_Index%Y6
-	
+
 	GuiHotkeysList = %GuiHotkeysList%,Spot%A_Index%ToolKey,Spot%A_Index%RuneKey,Spot%A_Index%ScrollKey
-	
+
 	GuiLabelsList = %GuiLabelsList%,Spot%A_Index%ToolLabel,Spot%A_Index%RuneKeyLabel,Spot%A_Index%ScrollLabel,Spot%A_Index%X1Label,Spot%A_Index%Y1Label,Spot%A_Index%X2Label,Spot%A_Index%Y2Label,Spot%A_Index%X3Label,Spot%A_Index%Y3Label,Spot%A_Index%X4Label,Spot%A_Index%Y4Label,Spot%A_Index%X5Label,Spot%A_Index%Y5Label,Spot%A_Index%X6Label,Spot%A_Index%Y6Label
-	
+
 	Tabs = %Tabs%|Spot%A_Index%
 }
 
 Loop, %MaxCustom%
 {
 	GuiSettingsList = %GuiSettingsList%,Custom%A_Index%Active,Custom%A_Index%CoordsItem,Custom%A_Index%CoordsTarget,Custom%A_Index%CoordsRight,Custom%A_Index%CoordsItemX,Custom%A_Index%CoordsItemY,Custom%A_Index%CoordsTargetX,Custom%A_Index%CoordsTargetY,Custom%A_Index%CoordsRightX,Custom%A_Index%CoordsRightY,Custom%A_Index%PreDelay,Custom%A_Index%PostDelay
-	
+
 	GuiDPSettingsList = %GuiDPSettingsList%,Custom%A_Index%Target
-	
+
 	GuiHotkeysList = %GuiHotkeysList%,Custom%A_Index%Key
-	
+
 	GuiLabelsList = %GuiLabelsList%,Custom%A_Index%KeyLabel,Custom%A_Index%CoordsItemXLabel,Custom%A_Index%CoordsItemYLabel,Custom%A_Index%CoordsTargetXLabel,Custom%A_Index%CoordsTargetYLabel,Custom%A_Index%CoordsRightXLabel,Custom%A_Index%CoordsRightYLabel,Custom%A_Index%PreDelayLabel,Custom%A_Index%PostDelayLabel
-	
+
 	Tabs = %Tabs%|Custom%A_Index%
 }
 
 Loop, %MaxCustomKeys%
 {
 	GuiDPSettingsList = %GuiDPSettingsList%,CustomKeys%A_Index%Key1Mod,CustomKeys%A_Index%Key2Mod,CustomKeys%A_Index%Key3Mod,CustomKeys%A_Index%Key4Mod,CustomKeys%A_Index%Key5Mod
-	
+
 	GuiHotkeysList = %GuiHotkeysList%,CustomKeys%A_Index%Key1InGame,CustomKeys%A_Index%Key2InGame,CustomKeys%A_Index%Key3InGame,CustomKeys%A_Index%Key4InGame,CustomKeys%A_Index%Key5InGame,CustomKeys%A_Index%Key1,CustomKeys%A_Index%Key2,CustomKeys%A_Index%Key3,CustomKeys%A_Index%Key4,CustomKeys%A_Index%Key5
-	
+
 	GuiLabelsList = %GuiLabelsList%,CustomKeys%A_Index%Key1IngameLabel,CustomKeys%A_Index%Key2IngameLabel,CustomKeys%A_Index%Key3IngameLabel,CustomKeys%A_Index%Key4IngameLabel,CustomKeys%A_Index%Key5IngameLabel,CustomKeys%A_Index%Key1Label,CustomKeys%A_Index%Key2Label,CustomKeys%A_Index%Key3Label,CustomKeys%A_Index%Key4Label,CustomKeys%A_Index%Key5Label
-	
+
 	Tabs = %Tabs%|CustomKeys%A_Index%
 }
 
 ;Global GUI settings
 Gui, New, hwndHGUI
-Gui, -MinimizeBox 
+Gui, -MinimizeBox
 
 ;;GUI elements fixed sizes
 SelectionHeight := 197
@@ -365,7 +365,7 @@ Gui, Add, Text, xp+40 y%Line1% w%CoordLabelWidth% vFishingY1Label, Y1
 Gui, Add, Edit, xp+20 y%Line1Text% w%CoordWidth% vFishingY1
 Gui, Add, Button, xp+40 y%Line1Set% w%SetButtonWidth% vSetFishing1 gSetFishing, Set
 Gui, Add, Text, xp+37 y%Line1% w%DelayLabelWidth% Right vFishingDelayLabel, Delay
-Gui, Add, Edit, xp+66 y%Line1Text% w%DelayWidth% vFishingDelay, 0 
+Gui, Add, Edit, xp+66 y%Line1Text% w%DelayWidth% vFishingDelay, 0
 
 ;Fishing Spot 2
 Gui, Add, Checkbox, x%Left% y%Line2% vFishing2 Disabled, Fishing2
@@ -421,7 +421,7 @@ Gui, Add, Checkbox, x%Left% y%Line1% w%CheckBoxWidth% vLockpicking gLockpickingO
 Gui, Add, Text, xp+110 y%Line1% w%StdLabelWidth% Right vLockpickKeyLabel, Lockpick Key
 Gui, Add, Edit, xp+79 y%Line1Text% w%HotkeyWidth% vLockpickKey
 Gui, Add, Text, xp+31 y%Line1% w%DelayLabelWidth% Right vLockpickDelayLabel, Delay
-Gui, Add, Edit, xp+66 y%Line1Text% w%DelayWidth% vLockpickDelay, 0 
+Gui, Add, Edit, xp+66 y%Line1Text% w%DelayWidth% vLockpickDelay, 0
 ;Locked Box 1
 Gui, Add, Text, x%Left% y0 w0
 Gui, Add, Text, xp+63 y%Line2% w%CoordLabelWidth% vBox1XLabel, X1
@@ -484,6 +484,11 @@ Gui, Add, Edit, xp+72 y%Line5Text% w%DelayWidth% vItemIDDelay
 Gui, Tab, Harvesting
 Gui, Add, Text, x%Left% y0 w0
 Gui, Add, Button, xp+60 y%Line1Set% w200 vAddSpotTab gAddSpotTab, Add a new harvesting spot
+Gui, Add, Text, x%Left% y0 w0
+Gui, Add, Checkbox, x%Left% y%Line2% vSurvey, Survey
+Gui, Add, Text, xp+25 y%Line2% w200 Right vSurveyLabel, Survey tool
+Gui, Add, Edit, xp+205 y%Line2Text% w50 vSurveykey
+Gui, Add, Text, x%Left% y0 w0
 Gui, Add, Button, xp y%Line3Set% w200 vRemoveSpotTab gRemoveSpotTab, Remove last harvesting spot
 Gui, Add, Text, x%Left% y0 w0
 Gui, Add, Text, xp+25 y%Line4% w200 Right vHarvestSensLabel, Tolerance for image searching
@@ -491,7 +496,7 @@ Gui, Add, Edit, xp+205 y%Line4Text% w%DelayWidth% HwndHHarvestSens vHarvestSens,
 TT.Attach(HHarvestSens, "Tolerance for Image Search. Raise if it never matches with the correct charge.bmp. Over 100 is too much")
 Gui, Add, Text, x%Left% y0 w0
 Gui, Add, Text, xp+25 y%Line5% w200 Right vHarvestingRoutineDelayLabel, Delay between two harvesting spots
-Gui, Add, Edit, xp+205 y%Line5Text% w%DelayWidth% vHarvestingRoutineDelay, 0 
+Gui, Add, Edit, xp+205 y%Line5Text% w%DelayWidth% vHarvestingRoutineDelay, 0
 Loop, %MaxSpots%
 {
 	Gui, Tab, Spot%A_Index%
@@ -601,35 +606,35 @@ Gui, Add, Button, xp y%Line3Set% w200 vRemoveCustomKeysTab gRemoveCustomKeysTab,
 Loop, %MaxCustomKeys%
 {
 	Gui, Tab, CustomKeys%A_Index%
-	
+
 	Gui, Add, Text, x%Left% y0 w0
 	Gui, Add, Text, xp+20 y%Line1% w84 Right vCustomKeys%A_Index%Key1IngameLabel, In Game Hotkey
 	Gui, Add, Edit, xp+89 y%Line1Text% w%HotkeyWidth% vCustomKeys%A_Index%Key1InGame
 	Gui, Add, Text, xp+31 y%Line1% w80 Right vCustomKeys%A_Index%Key1Label, New Hotkey
 	Gui, Add, Dropdownlist, xp+85 y%Line1Text% w45 AltSubmit vCustomKeys%A_Index%Key1Mod, |Alt|Ctrl|Shift
 	Gui, Add, Edit, xp+55 y%Line1Text% w%HotkeyWidth% vCustomKeys%A_Index%Key1
-	
+
 	Gui, Add, Text, x%Left% y0 w0
 	Gui, Add, Text, xp+20 y%Line2% w84 Right vCustomKeys%A_Index%Key2IngameLabel, In Game Hotkey
 	Gui, Add, Edit, xp+89 y%Line2Text% w%HotkeyWidth% vCustomKeys%A_Index%Key2InGame
 	Gui, Add, Text, xp+31 y%Line2% w80 Right vCustomKeys%A_Index%Key2Label, New Hotkey
 	Gui, Add, Dropdownlist, xp+85 y%Line2Text% w45 AltSubmit vCustomKeys%A_Index%Key2Mod, |Alt|Ctrl|Shift
 	Gui, Add, Edit, xp+55 y%Line2Text% w%HotkeyWidth% vCustomKeys%A_Index%Key2
-	
+
 	Gui, Add, Text, x%Left% y0 w0
 	Gui, Add, Text, xp+20 y%Line3% w84 Right vCustomKeys%A_Index%Key3IngameLabel, In Game Hotkey
 	Gui, Add, Edit, xp+89 y%Line3Text% w%HotkeyWidth% vCustomKeys%A_Index%Key3InGame
 	Gui, Add, Text, xp+31 y%Line3% w80 Right vCustomKeys%A_Index%Key3Label, New Hotkey
 	Gui, Add, Dropdownlist, xp+85 y%Line3Text% w45 AltSubmit vCustomKeys%A_Index%Key3Mod, |Alt|Ctrl|Shift
 	Gui, Add, Edit, xp+55 y%Line3Text% w%HotkeyWidth% vCustomKeys%A_Index%Key3
-	
+
 	Gui, Add, Text, x%Left% y0 w0
 	Gui, Add, Text, xp+20 y%Line4% w84 Right vCustomKeys%A_Index%Key4IngameLabel, In Game Hotkey
 	Gui, Add, Edit, xp+89 y%Line4Text% w%HotkeyWidth% vCustomKeys%A_Index%Key4InGame
 	Gui, Add, Text, xp+31 y%Line4% w80 Right vCustomKeys%A_Index%Key4Label, New Hotkey
 	Gui, Add, Dropdownlist, xp+85 y%Line4Text% w45 AltSubmit vCustomKeys%A_Index%Key4Mod, |Alt|Ctrl|Shift
 	Gui, Add, Edit, xp+55 y%Line4Text% w%HotkeyWidth% vCustomKeys%A_Index%Key4
-	
+
 	Gui, Add, Text, x%Left% y0 w0
 	Gui, Add, Text, xp+20 y%Line5% w84 Right vCustomKeys%A_Index%Key5IngameLabel, In Game Hotkey
 	Gui, Add, Edit, xp+89 y%Line5Text% w%HotkeyWidth% vCustomKeys%A_Index%Key5InGame
@@ -734,7 +739,7 @@ TVLABEL:
 			GuiControl,, OptionTitle, Custom Hotkeys Settings
 			GuiControl, choose, TabsList, CustomKeys
 		}
-		
+
 		Loop, %MaxSpots%
 		{
 			if (A_EventInfo == P11C%A_Index%)
@@ -743,7 +748,7 @@ TVLABEL:
 				GuiControl, choose, TabsList, Spot%A_Index%
 			}
 		}
-		
+
 		Loop, %MaxCustom%
 		{
 			if (A_EventInfo == P12C%A_Index%)
@@ -752,7 +757,7 @@ TVLABEL:
 				GuiControl, choose, TabsList, Custom%A_Index%
 			}
 		}
-		
+
 		Loop, %MaxCustomKeys%
 		{
 			if (A_EventInfo == P13C%A_Index%)
@@ -766,9 +771,9 @@ return
 
 GETCONFIGS:
    ItemList := ""
-   
+
    Loop, *.ini
-   {	
+   {
 		if (A_LoopFileName != "config.ini")
 		{
 			FilePath := A_LoopFileLongPath
@@ -786,7 +791,7 @@ GETCONFIGS:
 		ConfigIndex += 1
 		Configs%ConfigIndex% := Item1
    }
-	
+
    ItemList := ""
    ; GuiControl, Choose, PFL, 1
 Return
@@ -842,7 +847,7 @@ LOADCONFIG:
 			}
 		}
 	}
-	
+
 	;Save loaded config
 	IniWrite, %LoadedConfig%, config.ini, ConfigSetting, UserConfig
 return
@@ -853,7 +858,7 @@ Loop, %MaxCustomKeys%
 	while (i < 6)
 	{
 		CustomKeys%A_Index%Key%i%Routine:
-			MsgBox, Pushed 
+			MsgBox, Pushed
 		return
 		i++
 	}
@@ -863,12 +868,12 @@ ADJUSTGUI:
 	;Adjust Gui according to config values
 	if (OnTop)
 		Gui,+AlwaysOnTop
-	
+
 	if (!Taming)
 		GuiControl, Disable, Release
 	else
 		GuiControl, Enable, Release
-	
+
 	if (Music)
 	{
 		GuiControl, Disable, Provo
@@ -906,7 +911,7 @@ ADJUSTGUI:
 		Loop, parse, FishingOptionsList, `,
 			GuiControl, Enable, %A_LoopField%
 	}
-	
+
 	if (!Lockpicking) {
 		Loop, parse, LockpickingOptionsList, `,
 			GuiControl, Disable, %A_LoopField%
@@ -916,7 +921,7 @@ ADJUSTGUI:
 		Loop, parse, LockpickingOptionsList, `,
 			GuiControl, Enable, %A_LoopField%
 	}
-	
+
 	SetKeyDelay,%KeyDelay%
 return
 
@@ -936,7 +941,7 @@ SAVE:
 	Loop, parse, GuiHotkeysList, `,
 		IniWrite, % %A_LoopField%, %UserConfig%, Hotkeys, % A_LoopField
 return
-	
+
 ONTOP:
 	Gui, Submit, NoHide
 	if (OnTop)
@@ -967,7 +972,7 @@ TAMINGOPTIONS:
 		GuiControl, Disable, Release
 	}
 return
-	
+
 RELEASEOPTIONS:
 	Gui, Submit, NoHide
 	if (Release)
@@ -990,20 +995,20 @@ MUSICOPTIONS:
 		Peace = 0
 		Discord = 0
 		guicontrol,,Provo,0
-		guicontrol,,Peace,0 
-		guicontrol,,Discord,0 
+		guicontrol,,Peace,0
+		guicontrol,,Discord,0
 		GuiControl, Disable, Provo
 		GuiControl, Disable, Peace
 		GuiControl, Disable, Discord
-		
+
 	}
 	else if (Provo) {
 		Music = 0
 		Peace = 0
 		Discord = 0
 		guicontrol,,Music,0
-		guicontrol,,Peace,0 
-		guicontrol,,Discord,0  
+		guicontrol,,Peace,0
+		guicontrol,,Discord,0
 		GuiControl, Disable, Music
 		GuiControl, Disable, Peace
 		GuiControl, Disable, Discord
@@ -1013,8 +1018,8 @@ MUSICOPTIONS:
 		Provo = 0
 		Discord = 0
 		guicontrol,,Music,0
-		guicontrol,,Provo,0 
-		guicontrol,,Discord,0  
+		guicontrol,,Provo,0
+		guicontrol,,Discord,0
 		GuiControl, Disable, Music
 		GuiControl, Disable, Provo
 		GuiControl, Disable, Discord
@@ -1024,8 +1029,8 @@ MUSICOPTIONS:
 		Provo = 0
 		Peace = 0
 		guicontrol,,Music,0
-		guicontrol,,Provo,0 
-		guicontrol,,Peace,0  
+		guicontrol,,Provo,0
+		guicontrol,,Peace,0
 		GuiControl, Disable, Music
 		GuiControl, Disable, Provo
 		GuiControl, Disable, Peace
@@ -1053,7 +1058,7 @@ return
 
 FISHINGOPTIONS:
 	Gui, Submit, NoHide
-	if (Fishing) 
+	if (Fishing)
 	{
 		Loop, parse, FishingOptionsList, `,
 			GuiControl, Enable, %A_LoopField%
@@ -1061,14 +1066,14 @@ FISHINGOPTIONS:
 	else
 	{
 		Fishing2 = 0
-		GuiControl,,Fishing2,0	
+		GuiControl,,Fishing2,0
 		Loop, parse, FishingOptionsList, `,
 		{
 			GuiControl, Disable, %A_LoopField%
 		}
 	}
 return
-	
+
 SETFISHING:
 	StringRight, TargetNum, A_GuiControl, 1
 	XCoord = FishingX%TargetNum%
@@ -1078,7 +1083,7 @@ return
 
 LOCKPICKINGOPTIONS:
 	Gui, Submit, NoHide
-	if (Lockpicking) 
+	if (Lockpicking)
 	{
 		if (!FileExist("charge.bmp"))
 		{
@@ -1093,14 +1098,14 @@ LOCKPICKINGOPTIONS:
 	else
 	{
 		Lockpicking2 = 0
-		GuiControl,,Lockpicking2,0	
+		GuiControl,,Lockpicking2,0
 		Loop, parse, LockpickingOptionsList, `,
 		{
 			GuiControl, Disable, %A_LoopField%
 		}
 	}
 return
-	
+
 SETBOX:
 	StringRight, TargetNum, A_GuiControl, 1
 	XCoord = Box%TargetNum%X
@@ -1134,10 +1139,10 @@ ADDCUSTOMTAB:
 		return
 	}
 	MaxCustom++
-	
+
 	MsgBox, 4, Add Custom Tab, This will add a new custom routine, confirm?
 	IfMsgBox Yes
-	{	
+	{
 		;Write our new MaxCustom in config.ini
 		IniWrite, %MaxCustom%, %UserConfig%, GuiSettings, MaxCustom
 		;Save new custom tab default values
@@ -1206,7 +1211,7 @@ ADDSPOTTAB:
 			MsgBox charge.bmp is missing. You need to create it as per the wiki
 			return
 		}
-		
+
 	if (MaxSpots = 50)
 		{
 			MsgBox, Max Tab limit reached. Remove a harvesting spot.
@@ -1273,10 +1278,10 @@ ADDCUSTOMKEYSTAB:
 		return
 	}
 	MaxCustomKeys++
-	
+
 	MsgBox, 4, Add Custom Hotkeys Tab, This will add a new custom hotkeys page, confirm?
 	IfMsgBox Yes
-	{	
+	{
 		;Write our new MaxCustomKeys in config.ini
 		IniWrite, %MaxCustomKeys%, %UserConfig%, GuiSettings, MaxCustomKeys
 		;Save new custom hotkeys page default values
@@ -1345,7 +1350,7 @@ MAINLOOP:
 	WinActivate, %WinName%
 	Sleep 1000
 	WinGetPos, X, Y, Width, Height, %WinName%
-	
+
 	;Make sure loop is started
 	breakvar := 0
 
@@ -1355,18 +1360,18 @@ MAINLOOP:
 	FishingCounter := 1
 	LockpickCounter := 1
 	Harvested := 0
-	
+
 	;Harvesting coords:
 	Loop, %MaxSpots%
 	{
 		Spot%A_Index%Coords := [[Spot%A_Index%X1,Spot%A_Index%Y1],[Spot%A_Index%X2,Spot%A_Index%Y2],[Spot%A_Index%X3,Spot%A_Index%Y3],[Spot%A_Index%X4,Spot%A_Index%Y4],[Spot%A_Index%X5,Spot%A_Index%Y5],[Spot%A_Index%X6,Spot%A_Index%Y6]]
 	}
-	
+
 	Loop
 	{
 		if breakvar = 1
 			break
-		
+
 		;Check for delog
 		if (AutoRelog)
 		{
@@ -1394,11 +1399,11 @@ MAINLOOP:
 				Sleep 1000
 				WinActivate, %WinName%
 				Sleep 1000
-				
+
 				;Open Bag if lockpicking
 				if (Lockpicking)
 					SendHotkey(WinName,BackpackKey)
-				
+
 				;Target closest
 				if (Vet or Lore or Physical or MagicAtk)
 					SendHotkey(WinName,NextTargetKey)
@@ -1424,20 +1429,20 @@ MAINLOOP:
 				Sleep 1000
 				WinActivate, %WinName%
 				Sleep 1000
-				
+
 				;Open Bag if lockpicking
 				if (Lockpicking)
 					SendHotkey(WinName,BackpackKey)
-				
+
 				;Target closest
 				if (Vet or Lore or Physical or MagicAtk)
 					SendHotkey(WinName,NextTargetKey)
 			}
 		}
-		
+
 		if breakvar = 1
 			break
-		
+
 		;Hide first
 		if (Hiding)
 		{
@@ -1451,20 +1456,20 @@ MAINLOOP:
 			;Hide
 			SendHotkey(WinName,HidingKey)
 			Sleep %LagDelay%
-			
+
 			;Stealth around
 			if (Stealth) {
 				GuiControl,,Routine, %RoutineMessage2%
 				Sleep 1000
 				i := 0
 				while (i < Steps)
-				{	
+				{
 					StealthDelay := 9300 / Steps
 					HoldHotkey(WinName,Direction,100)
 					Sleep %StealthDelay%
 					i++
 					if breakvar = 1
-						break	
+						break
 				}
 				Sleep %LagDelay%
 			}
@@ -1489,7 +1494,7 @@ MAINLOOP:
 
 		if breakvar = 1
 			break
-	
+
 		;Healing
 		if (Bandages) {
 			GuiControl,,Routine, %RoutineMessage3%
@@ -1506,7 +1511,7 @@ MAINLOOP:
 
 		if breakvar = 1
 			break
-		
+
 		if (MagicHeal) {
 			GuiControl,,Routine, %RoutineMessage4%
 			SendHotkey(WinName,MagicHealKey)
@@ -1519,10 +1524,10 @@ MAINLOOP:
 				SendHotkey(WinName,LastKey)
 			Sleep %LagDelay%
 		}
-		
+
 		if breakvar = 1
 			break
-		
+
 		if (CurePot) {
 			GuiControl,,Routine, %RoutineMessage5%
 			SendHotkey(WinName,CurePotKey)
@@ -1535,10 +1540,10 @@ MAINLOOP:
 				SendHotkey(WinName,LastKey)
 			Sleep %LagDelay%
 		}
-		
+
 		if breakvar = 1
 			break
-		
+
 		if (CureSpell) {
 			GuiControl,,Routine, %RoutineMessage6%
 			SendHotkey(WinName,CureSpellKey)
@@ -1551,7 +1556,7 @@ MAINLOOP:
 				SendHotkey(WinName,LastKey)
 			Sleep %LagDelay%
 		}
-		
+
 		if breakvar = 1
 			break
 
@@ -1560,20 +1565,20 @@ MAINLOOP:
 
 		if breakvar = 1
 			break
-		
+
 		;Offensive
 		if (Physical)
-		{	
+		{
 			GuiControl,,Routine, %RoutineMessage7%
 			SendHotkey(WinName,PhysicalKey)
 			Sleep %PhysicalDuration%
 			SendHotkey(WinName,PhysicalKey)
 			Sleep %LagDelay%
 		}
-		
+
 		if breakvar = 1
 			break
-		
+
 		if (MagicAtk)
 		{
 			GuiControl,,Routine, %RoutineMessage8%
@@ -1586,7 +1591,7 @@ MAINLOOP:
 			else if (MagicAtkTarget = 4)
 				SendHotkey(WinName,LastKey)
 			Sleep %LagDelay%
-			
+
 			if (DoubleTarget) {
 				Sleep 1000
 				if (MagicAtkTarget = 2)
@@ -1599,10 +1604,10 @@ MAINLOOP:
 			SendHotkey(WinName,SkillKey)
 			Sleep %LagDelay%
 		}
-		
+
 		if breakvar = 1
 			break
-		
+
 		if (Physical or MagicAtk)
 		{
 			Sleep %OffensiveDelay%
@@ -1610,7 +1615,7 @@ MAINLOOP:
 
 		if breakvar = 1
 			break
-		
+
 		;Animal Lore
 		if (Lore)
 		{
@@ -1625,7 +1630,7 @@ MAINLOOP:
 
 		if breakvar = 1
 			break
-		
+
 		;Play Music
 		if (Music)
 		{
@@ -1680,7 +1685,7 @@ MAINLOOP:
 
 		if breakvar = 1
 			break
-		
+
 		;Lockpicking
 		if (Lockpicking)
 		{
@@ -1709,7 +1714,7 @@ MAINLOOP:
 				BoxKey := Box1Key
 				GuiControl,,Routine, %RoutineMessage14%
 			}
-			
+
 			;Try to pick Box
 			SendHotkey(WinName,LockpickKey)
 			Sleep %LagDelay%
@@ -1721,10 +1726,10 @@ MAINLOOP:
 			Sleep 100
 			Send, {LButton Up}
 			Sleep 1500
-			
+
 			if breakvar = 1
 			break
-			
+
 			;Look for the Charge bar
 			WinActivate, %WinName%
 			image_argument := "*" . LockpickingSens . " charge.bmp"
@@ -1732,9 +1737,9 @@ MAINLOOP:
 			lX1 := Width/2 - Width/8
 			lY1 := Height/2
 			lX2 := Width/2 + Width/8
-			lY2 := Height/2 + Height/4 
+			lY2 := Height/2 + Height/4
 			ImageSearch, FoundX, FoundY, lX1, lY1, lX2, lY2, %image_argument%
-			
+
 			if ErrorLevel = 1
 			{
 				GuiControl,,Routine, %RoutineMessage16%
@@ -1757,7 +1762,7 @@ MAINLOOP:
 
 		if breakvar = 1
 			break
-		
+
 		;Check if we need to release a pet
 		if (Release)
 		{
@@ -1767,7 +1772,7 @@ MAINLOOP:
 			Sleep %LagDelay%
 			SendHotkey(WinName,TargetKey)
 			Sleep %LagDelay%
-			
+
 			;Look for pop up
 			WinActivate, %WinName%
 			image_argument := "*" . ReleaseSens . " release.bmp"
@@ -1779,10 +1784,10 @@ MAINLOOP:
 			}
 			Sleep %ReleaseDelay%
 		}
-		
+
 		if breakvar = 1
 			break
-		
+
 		;Tab and tame a new target
 		if (Taming)
 		{
@@ -1799,7 +1804,7 @@ MAINLOOP:
 
 		if breakvar = 1
 			break
-		
+
 		if (Fishing)
 		{
 			if (Fishing2)
@@ -1809,7 +1814,7 @@ MAINLOOP:
 				{
 					FishingX := FishingX1
 					FishingY := FishingY1
-					GuiControl,,Routine, %RoutineMessage19% 
+					GuiControl,,Routine, %RoutineMessage19%
 				}
 				else
 				{
@@ -1824,7 +1829,7 @@ MAINLOOP:
 				FishingY := FishingY1
 				GuiControl,,Routine, %RoutineMessage19%
 			}
-			
+
 			if (FishingTotal > 1)
 			{
 				if (FishingCounter = FishingTotal + 1)
@@ -1834,7 +1839,7 @@ MAINLOOP:
 			}
 			SendHotkey(WinName,SkillKey)
 			Sleep %LagDelay%
-			
+
 			WinActivate, %WinName%
 			Sleep 100
 			SendHotkey(WinName,CenterCamKey)
@@ -1850,7 +1855,7 @@ MAINLOOP:
 
 		if breakvar = 1
 			break
-		
+
 		if (Vet)
 		{
 			GuiControl,,Routine, %RoutineMessage21%
@@ -1862,10 +1867,10 @@ MAINLOOP:
 			SendHotkey(WinName,AllStopKey)
 			Sleep %LagDelay%
 		}
-		
+
 		if breakvar = 1
 			break
-		
+
 		;Item ID
 		if (ItemID)
 		{
@@ -1911,29 +1916,29 @@ MAINLOOP:
 			}
 			Sleep %ItemIDDelay%
 		}
-	
+
 		if breakvar = 1
 			break
-		
+
 		;Harvesting
 		Loop, %MaxSpots% {
 			if (Spot%A_Index%Active)
-			{  
+			{
 				GuiControl,,Routine, %RoutineMessage22% %A_Index%
 				HarvestSpot(WinName, Width, Height, Spot%A_Index%RuneKey, Spot%A_Index%Scroll, Spot%A_Index%ScrollKey, Spot%A_Index%ToolKey, Spot%A_Index%Coords)
 				Harvested := 1
 			}
 		}
-		
+
 		if (Harvested)
 		{
 			MsgBox, Harvesting done
 			break
 		}
-	
+
 		if breakvar = 1
 			break
-		
+
 		;Custom Routines
 		Loop, %MaxCustom% {
 			if (Custom%A_Index%Active)
@@ -1962,7 +1967,7 @@ MAINLOOP:
 					break
 				SleepCustomDelay := Custom%A_Index%PreDelay
 				Sleep %SleepCustomDelay%
-				
+
 				; use a target hotkey or single click a specific coord
 				if (!Custom%A_Index%CoordsTarget)
 				{
@@ -1996,13 +2001,13 @@ MAINLOOP:
 					Sleep 50
 					Send, {RButton Down}
 					Sleep 100
-					Send, {RButton Up}					
+					Send, {RButton Up}
 				}
 				Sleep %LagDelay%
 				if breakvar = 1
 					break
 				SleepCustomDelay := Custom%A_Index%PostDelay
-				
+
 				; breaks up the custom post delay for easier breaking during long sleeps
 				PostDelayLoopCount := Floor(SleepCustomDelay/1000)
 				PostDelaySleepRemainder := Mod(SleepCustomDelay, 1000)
@@ -2018,21 +2023,21 @@ MAINLOOP:
 				break
 			Sleep %CustomRoutineDelay%
 		}
-		
+
 		Sleep 100
 		if breakvar = 1
 			break
-		
+
 		LoopCounter++
 		guicontrol,,LoopCounter, %LoopCounter%
 	}
-	
+
 	breakvar := 0
 	; Fix GUI
 	CleanUpGui(guiname)
 return
-	
-	
+
+
 GUICLOSE:
 EMERGENCY:
 	GoSub, Save
@@ -2049,10 +2054,12 @@ HarvestSpot(Window, WinWidth, WinHeight, HarvestRuneKey, HarvestScroll, HarvestS
 	Global breakvar
 	Global HarvestSens
 	Global HarvestingRoutineDelay
-	
+	Global Surveykey
+	Global Survey
+
 	if breakvar = 1
 		return
-				
+
 	;Go to Harvest spot
 	SendHotkey(Window,HarvestRuneKey)
 	Sleep %LagDelay%
@@ -2065,7 +2072,7 @@ HarvestSpot(Window, WinWidth, WinHeight, HarvestRuneKey, HarvestScroll, HarvestS
 	Sleep %HarvestingRoutineDelay%
 	SendHotkey(Window,HarvestToolKey)
 	Sleep 3000
-	
+
 	i := 1
 	while i < 7
 	{
@@ -2088,20 +2095,31 @@ HarvestSpot(Window, WinWidth, WinHeight, HarvestRuneKey, HarvestScroll, HarvestS
 		Send, {LButton Up}
 		Sleep 1000
 		breakvar2 := 0
-		
+
 		Loop
 		{
 			Sleep 100
 			if breakvar = 1
 				return
+			;Try survey
+			IF(survey)
+			{
+				SendHotkey(Window,Surveykey)
+				MouseMove, HarvestCoords[i][1], HarvestCoords[i][2], 0
+				Sleep %LagDelay%
+				Send, {LButton Down}
+				Sleep 100
+				Send, {LButton Up}
+			}
+
 			;Look for the Charge bar
 			WinActivate, %Window%
 			image_argument := "*" . HarvestSens . " charge.bmp"
 			lX1 := WinWidth/2 - WinWidth/8
 			lY1 := WinHeight/2
 			lX2 := WinWidth/2 + WinWidth/8
-			lY2 := WinHeight/2 + WinHeight/4 
-			
+			lY2 := WinHeight/2 + WinHeight/4
+
 			ImageSearch, FoundX, FoundY, lX1, lY1, lX2, lY2, %image_argument%
 			if ErrorLevel = 1
 			{
@@ -2111,7 +2129,7 @@ HarvestSpot(Window, WinWidth, WinHeight, HarvestRuneKey, HarvestScroll, HarvestS
 			}
 			else
 				breakvar2 := 0
-			
+
 			;Could not see the harvest bar for more than 5 seconds.
 			if (breakvar2 > 5)
 				break
@@ -2128,13 +2146,13 @@ SetGuiCoords(SettingX,SettingY,Window)
 	Gui, Submit, NoHide
 	MsgBox, Your client window will become active after you click OK.`nMove the mouse to where you want and left click
 	WinActivate, %Window%
-	
+
 	KeyWait, LButton, D
 	MouseGetPos, UserX, UserY
 
 	guicontrol,,%SettingX%,%UserX%
 	guicontrol,,%SettingY%,%UserY%
-	
+
 	MsgBox, Saved %UserX% - %UserY%
 	return
 }
@@ -2161,23 +2179,23 @@ GuiState(state)
 	Global GuiDPSettingsList
 	Global GuiHotkeysList
 	Global GuiLabelsList
-	
+
 	Loop, parse, GuiSettingsList, `,
 		GuiControl, %State%, %A_LoopField%
-	
+
 	Loop, parse, GuiDPSettingsList, `,
 		GuiControl, %State%, %A_LoopField%
-	
+
 	Loop, parse, GuiHotkeysList, `,
 		GuiControl, %State%, %A_LoopField%
-	
+
 	Loop, parse, GuiLabelsList, `,
 		GuiControl, %State%, %A_LoopField%
-	
+
 	Loop, parse, GuiSetButtonsList, `,
 		GuiControl, %State%, %A_LoopField%
 
-	return	
+	return
 }
 
 ;Use the specified Hotkey in a specific client window.
@@ -2228,13 +2246,13 @@ ImageClick(Window,Width,Height,image_argument,offsetX:=0,offsetY:=0)
 }
 
 CheckDelog(Window,Char)
-{	
+{
 	Global Sens
 	Global breakvar
 	WinActivate, %Window%
 	WinGetPos, X, Y, Width, Height, %Window%
 	OffsetY := 43 * (Char - 1)
-	
+
 	;Look for the title screen play button
 	i := 0
 	Loop
@@ -2247,10 +2265,10 @@ CheckDelog(Window,Char)
 		if ImageClick(Window,Width,Height,image_argument2)
 			break
 		Sleep 1000
-		
+
 		i++
 		if (i > 60)
-		{	
+		{
 			WinActivate, %Window%
 			;Look for the Ok button in an error window
 			image_argument := "*" . Sens . " okerror.bmp"
@@ -2276,13 +2294,13 @@ CheckDelog(Window,Char)
 			return
 	}
 
-	
-	
+
+
 	;Play button was present and clicked
 	;Move mouse out of the way
 	Sleep 100
 	MouseMove,Width/2,Height/2
-	
+
 	;Look for community tab
 	i := 0
 	Loop
@@ -2298,12 +2316,12 @@ CheckDelog(Window,Char)
 		image_argument := "*" . Sens . " okerror.bmp"
 		if ImageClick(Window,Width,Height,image_argument)
 			return CheckDelog(Window,Char)
-		
+
 		Sleep 1000
 
 		i++
 		if (i > 60)
-		{	
+		{
 			WinActivate, %Window%
 			;Timed out in a weird way, click back button and start over
 			image_argument := "*" . Sens . " back.bmp"
@@ -2314,9 +2332,9 @@ CheckDelog(Window,Char)
 		if breakvar = 1
 			return
 	}
-	
-	
-	
+
+
+
 	;Look for server name
 	i := 0
 	Loop
@@ -2325,15 +2343,15 @@ CheckDelog(Window,Char)
 		image_argument := "*" . Sens . " loultima.bmp"
 		if ImageClick(Window,Width,Height,image_argument)
 			break
-		
+
 		WinActivate, %Window%
 		;Look for the Connect Failed window
 		image_argument := "*" . Sens . " okerror.bmp"
 		if ImageClick(Window,Width,Height,image_argument)
 			return CheckDelog(Window,Char)
-		
+
 		Sleep 1000
-		
+
 		i++
 		if (i > 60)
 		{
@@ -2347,7 +2365,7 @@ CheckDelog(Window,Char)
 		if breakvar = 1
 			return
 	}
-	
+
 	;Look for Enter World button
 	i := 0
 	Loop
@@ -2356,15 +2374,15 @@ CheckDelog(Window,Char)
 		image_argument := "*" . Sens . " enter.bmp"
 		if ImageClick(Window,Width,Height,image_argument)
 			break
-		
+
 		WinActivate, %Window%
 		;Look for the Connect Failed window
 		image_argument := "*" . Sens . " okerror.bmp"
 		if ImageClick(Window,Width,Height,image_argument)
 			return CheckDelog(Window,Char)
-		
+
 		Sleep 1000
-		
+
 		i++
 		if (i > 60)
 		{
@@ -2378,7 +2396,7 @@ CheckDelog(Window,Char)
 		if breakvar = 1
 			return
 	}
-	
+
 	;Look for Character Box corner
 	Sleep 3000
 	Loop
@@ -2391,7 +2409,7 @@ CheckDelog(Window,Char)
 			break
 		}
 		Sleep 1000
-		
+
 		i++
 		if (i > 60)
 		{
@@ -2427,7 +2445,7 @@ CheckDelog(Window,Char)
 		if ImageClick(Window,Width,Height,image_argument)
 			break
 		Sleep 1000
-		
+
 		i++
 		if (i > 60)
 		{
@@ -2454,10 +2472,10 @@ CheckDelog(Window,Char)
 		if breakvar = 1
 			return
 	}
-	
+
 	;Give client time to load
 	Sleep 3000
-	
+
 	;Check ingame, look for red bar in hp
 	Loop
 	{
@@ -2465,14 +2483,14 @@ CheckDelog(Window,Char)
 		image_argument := "*" . Sens . " ingame.bmp"
 		if ImageClick(Window,Width,Height,image_argument)
 			break
-		
+
 		WinActivate, %Window%
 		;Look for the Connect Failed window
 		image_argument := "*" . Sens . " failed.bmp"
 		if ImageClick(Window,Width,Height,image_argument)
 			return CheckDelog(Window,Char)
 		Sleep 1000
-		
+
 		i++
 		if (i > 60)
 		{
