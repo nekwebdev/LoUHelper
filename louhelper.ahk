@@ -2104,7 +2104,7 @@ HarvestSpot(Window, WinWidth, WinHeight, HarvestRuneKey, HarvestScroll, HarvestS
 			;Try survey
 			if(survey)
 			{
-				SendHotkey(Window,Surveykey)
+				SendHotkey(Window,SurveyKey)
 				MouseMove, HarvestCoords[i][1], HarvestCoords[i][2], 0
 				Sleep %LagDelay%
 				Send, {LButton Down}
