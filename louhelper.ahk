@@ -1263,11 +1263,10 @@ REMOVESPOTTAB:
 return
 
 SETSPOTTARGET:
-	StringLeft, SpotNumTemp, A_GuiControl, 8
-	StringRight, SpotNum, SpotNumTemp, 1
+	RegExMatch(A_GuiControl, "SetSpot(\d+)", SpotNum)
 	StringRight, TargetNum, A_GuiControl, 1
-	XCoord = Spot%SpotNum%X%TargetNum%
-	YCoord = Spot%SpotNum%Y%TargetNum%
+	XCoord = Spot%SpotNum1%X%TargetNum%
+	YCoord = Spot%SpotNum1%Y%TargetNum%
 	SetGuiCoords(XCoord,YCoord,WinName)
 return
 
