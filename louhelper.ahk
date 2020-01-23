@@ -489,7 +489,7 @@ Gui, Add, Checkbox, x%Left% y%Line2% vSurvey, Survey
 Gui, Add, Text, xp+25 y%Line2% w200 Right vSurveyLabel, Survey tool
 Gui, Add, Edit, xp+205 y%Line2Text% w50 vSurveyKey
 Gui, Add, Text, x%Left% y0 w0
-Gui, Add, Button, xp y%Line3Set% w200 vRemoveSpotTab gRemoveSpotTab, Remove last harvesting spot
+Gui, Add, Button, xp+60 y%Line3Set% w200 vRemoveSpotTab gRemoveSpotTab, Remove last harvesting spot
 Gui, Add, Text, x%Left% y0 w0
 Gui, Add, Text, xp+25 y%Line4% w200 Right vHarvestSensLabel, Tolerance for image searching
 Gui, Add, Edit, xp+205 y%Line4Text% w%DelayWidth% HwndHHarvestSens vHarvestSens, 50
