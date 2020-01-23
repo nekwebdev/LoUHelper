@@ -38,7 +38,7 @@ IniRead, MaxSpots, %TempConfig%, GuiSettings, MaxSpots
 IniRead, MaxCustom, %TempConfig%, GuiSettings, MaxCustom
 IniRead, MaxCustomKeys, %TempConfig%, GuiSettings, MaxCustomKeys
 StringTrimRight, TempConfig, TempConfig, 4
-guiname := "LoU Helper v1.55 - " . TempConfig
+guiname := "LoU Helper v1.7 - " . TempConfig
 
 ;Get Routine Messages
 IniRead, RoutineMessages, config.ini, ConfigRoutineMessages
