@@ -49,15 +49,15 @@ Loop Parse, RoutineMessages, `n
 }
 
 ;Lists of settings to iterate
-Tabs = General|GeneralKeys|Taming|Music|Healing|Hiding|Fishing|Offensive|Lockpicking|Custom|Harvesting|ItemID|CustomKeys
+Tabs = General|GeneralKeys|Taming|Music|Healing|Hiding|Fishing|Offensive|Lockpicking|Custom|Harvesting|ItemID|ItemTransfer|CustomKeys
 
-GuiSettingsList = Survey,OnTop,FromName,WinName,AutoRelog,CharNumber,Sens,LagDelay,KeyDelay,Taming,TamingDelay,Release,ReleaseDelay,ReleaseSens,Lore,LoreDelay,Vet,VetDelay,Music,MusicDelay,Peace,PeaceDelay,Provo,ProvoDelay,Discord,DiscordDelay,Bandages,MagicHeal,CurePot,CureSpell,HealingDelay,Hiding,Stealth,Steps,HidingDelay,Fishing,FishingDelay,FishingX1,FishingY1,Fishing2,FishingX2,FishingY2,FishingTotal,Physical,PhysicalDuration,MagicAtk,DoubleTarget,OffensiveDelay,Lockpicking,LockpickDelay,Box1X,Box1Y,Lockpicking2,Box2X,Box2Y,LockpickingSens,ItemID,ItemIDSourceTLX,ItemIDSourceTLY,ItemIDSourceBRX,ItemIDSourceBRY,ItemIDContainerX,ItemIDContainerY,ItemIDSens,ItemIDDelay,CustomRoutineDelay,HarvestingRoutineDelay,HarvestSens
+GuiSettingsList = MoveCycleCount,MoveToX,MoveToY,MoveFromX,MoveFromY,ItemTransfer,Survey,OnTop,FromName,WinName,AutoRelog,CharNumber,Sens,LagDelay,KeyDelay,Taming,TamingDelay,Release,ReleaseDelay,ReleaseSens,Lore,LoreDelay,Vet,VetDelay,Music,MusicDelay,Peace,PeaceDelay,Provo,ProvoDelay,Discord,DiscordDelay,Bandages,MagicHeal,CurePot,CureSpell,HealingDelay,Hiding,Stealth,Steps,HidingDelay,Fishing,FishingDelay,FishingX1,FishingY1,Fishing2,FishingX2,FishingY2,FishingTotal,Physical,PhysicalDuration,MagicAtk,DoubleTarget,OffensiveDelay,Lockpicking,LockpickDelay,Box1X,Box1Y,Lockpicking2,Box2X,Box2Y,LockpickingSens,ItemID,ItemIDSourceTLX,ItemIDSourceTLY,ItemIDSourceBRX,ItemIDSourceBRY,ItemIDContainerX,ItemIDContainerY,ItemIDSens,ItemIDDelay,CustomRoutineDelay,HarvestingRoutineDelay,HarvestSens
 
 GuiDPSettingsList = BandagesTarget,MagicHealTarget,CurePotTarget,CureSpellTarget,MagicAtkTarget
 
 GuiHotkeysList = SurveyKey,SelfKey,TargetKey,LastKey,SkillKey,SecondKey,NextTargetKey,LastObjectKey,CenterCamKey,BackpackKey,StopKey,EmergencyKey,LeftKey,RightKey,UpKey,DownKey,TamingKey,ReleaseKey,LoreKey,AllKillKey,AllStopKey,MusicKey,PeaceKey,ProvoKey,DiscordKey,BandagesKey,MagicHealKey,CurePotKey,CureSpellKey,HidingKey,FishingKey1,FishingKey2,FishingKey3,FishingKey4,FishingKey5,FishingKey6,FishingKey7,FishingKey8,FishingKey9,PhysicalKey,MagicAtkKey,Box1Key,Box2Key,GlassKey,LockpickKey
 
-GuiLabelsList = SurveyLabel,OptionTitle,TabsList,ConfigLabel,ClientNameLabel,FromNameLabel,ToNameLabel,CharNumberLabel,SensLabel,SelfKeyLabel,TargetKeyLabel,LastKeyLabel,LastObjectLabel,SkillKeyLabel,SecondKeyLabel,NextTargetKeyLabel,CenterCamKeyLabel,BackpackKeyLabel,KeyDelayLabel,LagDelayLabel,StopKeyLabel,EmergencyKeyLabel,UpKeyLabel,LeftKeyLabel,DownKeyLabel,RightKeyLabel,TamingKeyLabel,TamingDelayLabel,ReleaseKeyLabel,ReleaseDelayLabel,ReleaseSensLabel,LoreKeyLabel,LoreDelayLabel,AllKillKeyLabel,AllStopKeyLabel,VetDelayLabel,MusicKeyLabel,MusicDelayLabel,PeaceKeyLabel,PeaceDelayLabel,ProvoKeyLabel,ProvoDelayLabel,DiscordKeyLabel,DiscordDelayLabel,BandagesKeyLabel,MagicHealKeyLabel,CurePotLabel,CureSpellLabel,HealingDelayLabel,HidingKeyLabel,HidingDelayLabel,StepsLabel,FishingTotalLabel,FishingDelayLabel,FishingX1Label,FishingY1Label,FishingX2Label,FishingY2Label,FishingKey1Label,FishingKey2Label,FishingKey3Label,FishingKey4Label,FishingKey5Label,FishingKey6Label,FishingKey7Label,FishingKey8Label,FishingKey9Label,PhysicalKeyLabel,PhysicalDurationLabel,MagicAtkKeyLabel,OffensiveDelayLabel,LockpickKeyLabel,LockpickDelayLabel,Box1XLabel,Box1YLabel,Box1KeyLabel,Box2XLabel,Box2YLabel,Box2KeyLabel,LockpickingSensLabel,ItemIDSourceTLXLabel,ItemIDSourceTLYLabel,ItemIDSourceBRXLabel,ItemIDSourceBRYLabel,ItemIDContainerXLabel,ItemIDContainerYLabel,GlassKeyLabel,ItemIDSensLabel,ItemIDDelayLabel,CustomRoutineDelayLabel,HarvestingRoutineDelayLabel,HarvestSensLabel
+GuiLabelsList = MoveCycleCountLabel,MoveToXLabel,MoveToYLabel,MoveFromXLabel,MoveFromYLabel,SurveyLabel,OptionTitle,TabsList,ConfigLabel,ClientNameLabel,FromNameLabel,ToNameLabel,CharNumberLabel,SensLabel,SelfKeyLabel,TargetKeyLabel,LastKeyLabel,LastObjectLabel,SkillKeyLabel,SecondKeyLabel,NextTargetKeyLabel,CenterCamKeyLabel,BackpackKeyLabel,KeyDelayLabel,LagDelayLabel,StopKeyLabel,EmergencyKeyLabel,UpKeyLabel,LeftKeyLabel,DownKeyLabel,RightKeyLabel,TamingKeyLabel,TamingDelayLabel,ReleaseKeyLabel,ReleaseDelayLabel,ReleaseSensLabel,LoreKeyLabel,LoreDelayLabel,AllKillKeyLabel,AllStopKeyLabel,VetDelayLabel,MusicKeyLabel,MusicDelayLabel,PeaceKeyLabel,PeaceDelayLabel,ProvoKeyLabel,ProvoDelayLabel,DiscordKeyLabel,DiscordDelayLabel,BandagesKeyLabel,MagicHealKeyLabel,CurePotLabel,CureSpellLabel,HealingDelayLabel,HidingKeyLabel,HidingDelayLabel,StepsLabel,FishingTotalLabel,FishingDelayLabel,FishingX1Label,FishingY1Label,FishingX2Label,FishingY2Label,FishingKey1Label,FishingKey2Label,FishingKey3Label,FishingKey4Label,FishingKey5Label,FishingKey6Label,FishingKey7Label,FishingKey8Label,FishingKey9Label,PhysicalKeyLabel,PhysicalDurationLabel,MagicAtkKeyLabel,OffensiveDelayLabel,LockpickKeyLabel,LockpickDelayLabel,Box1XLabel,Box1YLabel,Box1KeyLabel,Box2XLabel,Box2YLabel,Box2KeyLabel,LockpickingSensLabel,ItemIDSourceTLXLabel,ItemIDSourceTLYLabel,ItemIDSourceBRXLabel,ItemIDSourceBRYLabel,ItemIDContainerXLabel,ItemIDContainerYLabel,GlassKeyLabel,ItemIDSensLabel,ItemIDDelayLabel,CustomRoutineDelayLabel,HarvestingRoutineDelayLabel,HarvestSensLabel
 
 GuiSetButtonsList = LoadedConfig,SetName,SetFishing,SetBox,SetSpotTarget,SetCustomCoordsItem,SetCustomCoordsTarget
 
@@ -177,6 +177,7 @@ Gui, Add, TreeView, R1 h%SelectionHeight% w%LeftColumnWidth% -0x4 AltSubmit -But
 		CustomKeysTab = Page %A_Index%
 		P13C%A_Index% := TV_Add(CustomKeysTab,P13)
 	}
+	P14 := TV_Add("Item Transfer")
 
 ;Here GUI coords offsets are still hard coded, havent figured a clean way to do it yet.
 
@@ -643,6 +644,27 @@ Loop, %MaxCustomKeys%
 	Gui, Add, Edit, xp+55 y%Line5Text% w%HotkeyWidth% vCustomKeys%A_Index%Key5
 }
 Gui, Tab
+;;ItemTransfer Settings
+Gui, Tab, ItemTransfer
+Gui, Add, Checkbox, x%Left% y%Line1% vItemTransfer, Item Transfer
+;Item transfer cycles to run
+Gui, Add, Text, xp+85 y%Line1% w30 Right vMoveCycleCountLabel, Move cycles
+Gui, Add, Edit, xp+50 y%Line1% w30 vMoveCycleCount
+;Move/drag FROM list location
+Gui, Add, Text, x%Left% y0 w0
+Gui, Add, Text, xp+58 y%Line2% w64 Right vMoveFromXLabel, Move From X
+Gui, Add, Edit, xp+77 y%Line2Text% w%CoordWidth% vMoveFromX
+Gui, Add, Text, xp+40 y%Line2% w64 Right vMoveFromYLabel, Move From Y
+Gui, Add, Edit, xp+77 y%Line2Text% w%CoordWidth% vMoveFromY
+Gui, Add, Button, xp+40 y%Line2Set% w%SetButtonWidth% vSetMoveF gSetMove, Set
+;Move/drag TO location
+Gui, Add, Text, x%Left% y0 w0
+Gui, Add, Text, xp+58 y%Line3% w64 Right vMoveToXLabel, Move To X
+Gui, Add, Edit, xp+77 y%Line3Text% w%CoordWidth% vMoveToX
+Gui, Add, Text, xp+40 y%Line3% w64 Right vMoveToYLabel, Move To Y
+Gui, Add, Edit, xp+77 y%Line3Text% w%CoordWidth% vMoveToY
+Gui, Add, Button, xp+40 y%Line3Set% w%SetButtonWidth% vSetMoveT gSetMove, Set
+
 ;Routine indicator
 Gui,Add,Text, cGreen x%Left% y%SelectionHeight% w190 Center vRoutine Hidden, Doing Stuff
 ;Loops indicator
@@ -739,7 +761,11 @@ TVLABEL:
 			GuiControl,, OptionTitle, Custom Hotkeys Settings
 			GuiControl, choose, TabsList, CustomKeys
 		}
-
+		else if (A_EventInfo == P14)
+		{
+			GuiControl,, OptionTitle, Item Transfer
+			GuiControl, choose, TabsList, ItemTransfer
+		}
 		Loop, %MaxSpots%
 		{
 			if (A_EventInfo == P11C%A_Index%)
@@ -1130,6 +1156,14 @@ SETITEMID:
 		SetGuiCoords("ItemIDSourceBRX","ItemIDSourceBRY",WinName)
 	else if (CoordType = "T")
 		SetGuiCoords("ItemIDContainerX","ItemIDContainerY",WinName)
+return
+
+SETMOVE:
+	StringRight, CoordType, A_GuiControl, 1
+	if (CoordType = "F")
+		SetGuiCoords("MoveFromX","MoveFromY",WinName)
+	else if (CoordType = "T")
+		SetGuiCoords("MoveToX","MoveToY",WinName)
 return
 
 ADDCUSTOMTAB:
@@ -1918,6 +1952,33 @@ MAINLOOP:
 
 		if breakvar = 1
 			break
+
+			;Item Transfer
+			if (ItemTransfer)
+			{
+				WinActivate, %WinName%
+				i := 0
+				while (i < MoveCycleCount)
+				{
+					WinActivate, %WinName%
+					MouseMove, MoveFromX, MoveFromY, 0
+					Send, {LButton Down}
+					Sleep 250
+					MouseMove, MoveToX, MoveToY, 0
+					Sleep %LagDelay%
+					Send, {LButton Up}
+					i++
+				}
+				Send, {LButton Down}
+				Sleep %LagDelay%
+				Send, {LButton Up}
+				Sleep %LagDelay%
+				MsgBox, Items transfered
+				break
+			}
+
+			if breakvar = 1
+				break
 
 		;Harvesting
 		Loop, %MaxSpots% {
