@@ -643,7 +643,6 @@ Loop, %MaxCustomKeys%
 	Gui, Add, Dropdownlist, xp+85 y%Line5Text% w45 AltSubmit vCustomKeys%A_Index%Key5Mod, |Alt|Ctrl|Shift
 	Gui, Add, Edit, xp+55 y%Line5Text% w%HotkeyWidth% vCustomKeys%A_Index%Key5
 }
-Gui, Tab
 ;;ItemTransfer Settings
 Gui, Tab, ItemTransfer
 Gui, Add, Checkbox, x%Left% y%Line1% vItemTransfer, Item Transfer
@@ -665,6 +664,7 @@ Gui, Add, Text, xp+40 y%Line3% w64 Right vMoveToYLabel, Move To Y
 Gui, Add, Edit, xp+77 y%Line3Text% w%CoordWidth% vMoveToY
 Gui, Add, Button, xp+40 y%Line3Set% w%SetButtonWidth% vSetMoveT gSetMove, Set
 
+Gui, Tab
 ;Routine indicator
 Gui,Add,Text, cGreen x%Left% y%SelectionHeight% w190 Center vRoutine Hidden, Doing Stuff
 ;Loops indicator
