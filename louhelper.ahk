@@ -51,7 +51,7 @@ Loop Parse, RoutineMessages, `n
 ;Lists of settings to iterate
 Tabs = General|GeneralKeys|Taming|Music|Healing|Hiding|Fishing|Offensive|Lockpicking|Custom|Harvesting|ItemID|ItemTransfer|CustomKeys
 
-GuiSettingsList = MoveCycleCount,MoveToX,MoveToY,MoveFromX,MoveFromY,ItemTransfer,Survey,OnTop,FromName,WinName,AutoRelog,CharNumber,Sens,LagDelay,KeyDelay,Taming,TamingDelay,Release,ReleaseDelay,ReleaseSens,Lore,LoreDelay,Vet,VetDelay,Music,MusicDelay,Peace,PeaceDelay,Provo,ProvoDelay,Discord,DiscordDelay,Bandages,MagicHeal,CurePot,CureSpell,HealingDelay,Hiding,Stealth,Steps,HidingDelay,Fishing,FishingDelay,FishingX1,FishingY1,Fishing2,FishingX2,FishingY2,FishingTotal,Physical,PhysicalDuration,MagicAtk,DoubleTarget,OffensiveDelay,Lockpicking,LockpickDelay,Box1X,Box1Y,Lockpicking2,Box2X,Box2Y,LockpickingSens,ItemID,ItemIDSourceTLX,ItemIDSourceTLY,ItemIDSourceBRX,ItemIDSourceBRY,ItemIDContainerX,ItemIDContainerY,ItemIDSens,ItemIDDelay,CustomRoutineDelay,HarvestingRoutineDelay,HarvestSens
+GuiSettingsList = MoveCycleCount,MoveToX,MoveToY,MoveFromX,MoveFromY,ItemTransfer,ItenInMain,Survey,OnTop,FromName,WinName,AutoRelog,CharNumber,Sens,LagDelay,KeyDelay,Taming,TamingDelay,Release,ReleaseDelay,ReleaseSens,Lore,LoreDelay,Vet,VetDelay,Music,MusicDelay,Peace,PeaceDelay,Provo,ProvoDelay,Discord,DiscordDelay,Bandages,MagicHeal,CurePot,CureSpell,HealingDelay,Hiding,Stealth,Steps,HidingDelay,Fishing,FishingDelay,FishingX1,FishingY1,Fishing2,FishingX2,FishingY2,FishingTotal,Physical,PhysicalDuration,MagicAtk,DoubleTarget,OffensiveDelay,Lockpicking,LockpickDelay,Box1X,Box1Y,Lockpicking2,Box2X,Box2Y,LockpickingSens,ItemID,ItemIDSourceTLX,ItemIDSourceTLY,ItemIDSourceBRX,ItemIDSourceBRY,ItemIDContainerX,ItemIDContainerY,ItemIDSens,ItemIDDelay,CustomRoutineDelay,HarvestingRoutineDelay,HarvestSens
 
 GuiDPSettingsList = BandagesTarget,MagicHealTarget,CurePotTarget,CureSpellTarget,MagicAtkTarget
 
@@ -663,6 +663,9 @@ Gui, Add, Edit, xp+77 y%Line3Text% w%CoordWidth% vMoveToX
 Gui, Add, Text, xp+40 y%Line3% w64 Right vMoveToYLabel, Move To Y
 Gui, Add, Edit, xp+77 y%Line3Text% w%CoordWidth% vMoveToY
 Gui, Add, Button, xp+40 y%Line3Set% w%SetButtonWidth% vSetMoveT gSetMove, Set
+;Move/drag TO location
+Gui, Add, Text, x%Left% y0 w0
+Gui, Add, Checkbox, x%Left% y%Line4% vItemInMain, Outside Main Loop
 
 Gui, Tab
 ;Routine indicator
@@ -1973,7 +1976,10 @@ MAINLOOP:
 				Sleep %LagDelay%
 				Send, {LButton Up}
 				Sleep %LagDelay%
-				break
+				if (ItemInMain)
+				{
+					break
+				}
 			}
 
 			if breakvar = 1
