@@ -663,7 +663,7 @@ Gui, Add, Edit, xp+77 y%Line3Text% w%CoordWidth% vMoveToX
 Gui, Add, Text, xp+40 y%Line3% w64 Right vMoveToYLabel, Move To Y
 Gui, Add, Edit, xp+77 y%Line3Text% w%CoordWidth% vMoveToY
 Gui, Add, Button, xp+40 y%Line3Set% w%SetButtonWidth% vSetMoveT gSetMove, Set
-;Move/drag TO location
+;Inside or outsie main loop
 Gui, Add, Text, x%Left% y0 w0
 Gui, Add, Checkbox, x%Left% y%Line4% vItemInMain, Outside Main Loop
 
