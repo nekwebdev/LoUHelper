@@ -1219,24 +1219,24 @@ REMOVECUSTOMTAB:
 return
 
 SETCUSTOMCOORDSITEM:
-	StringLeft, CustomNumTemp, A_GuiControl, 10
-	StringRight, CustomNum, CustomNumTemp, 1
+	RegExMatch(A_GuiControl, "O)SetCustom(?<m1>\d+)", CustomNumTemp)
+	CustomNum := CustomNumTemp["m1"]
 	XCoord = Custom%CustomNum%CoordsItemX
 	YCoord = Custom%CustomNum%CoordsItemY
 	SetGuiCoords(XCoord,YCoord,WinName)
 return
 
 SETCUSTOMCOORDSTARGET:
-	StringLeft, CustomNumTemp, A_GuiControl, 10
-	StringRight, CustomNum, CustomNumTemp, 1
+	RegExMatch(A_GuiControl, "O)SetCustom(?<m1>\d+)", CustomNumTemp)
+	CustomNum := CustomNumTemp["m1"]
 	XCoord = Custom%CustomNum%CoordsTargetX
 	YCoord = Custom%CustomNum%CoordsTargetY
 	SetGuiCoords(XCoord,YCoord,WinName)
 return
 
 SETCUSTOMCOORDSRIGHT:
-	StringLeft, CustomNumTemp, A_GuiControl, 10
-	StringRight, CustomNum, CustomNumTemp, 1
+	RegExMatch(A_GuiControl, "O)SetCustom(?<m1>\d+)", CustomNumTemp)
+	CustomNum := CustomNumTemp["m1"]
 	XCoord = Custom%CustomNum%CoordsRightX
 	YCoord = Custom%CustomNum%CoordsRightY
 	SetGuiCoords(XCoord,YCoord,WinName)
@@ -2033,6 +2033,20 @@ MAINLOOP:
 				SleepCustomDelay := Custom%A_Index%PreDelay
 				Sleep %SleepCustomDelay%
 
+				; right click a specific coord
+				if (Custom%A_Index%CoordsRight)
+				{
+					;Right click Mouse
+					WinActivate, %WinName%
+					Sleep 100
+					MouseMove, Custom%A_Index%CoordsRightX, Custom%A_Index%CoordsRightY, 0
+					Sleep 50
+					Send, {RButton Down}
+					Sleep 100
+					Send, {RButton Up}
+					Sleep 500
+				}
+				
 				; use a target hotkey or single click a specific coord
 				if (!Custom%A_Index%CoordsTarget)
 				{
@@ -2056,18 +2070,7 @@ MAINLOOP:
 					Sleep 100
 					Send, {LButton Up}
 				}
-				; right click a specific coord
-				if (Custom%A_Index%CoordsRight)
-				{
-					;Right click Mouse
-					WinActivate, %WinName%
-					Sleep 100
-					MouseMove, Custom%A_Index%CoordsRightX, Custom%A_Index%CoordsRightY, 0
-					Sleep 50
-					Send, {RButton Down}
-					Sleep 100
-					Send, {RButton Up}
-				}
+				
 				Sleep %LagDelay%
 				if breakvar = 1
 					break
