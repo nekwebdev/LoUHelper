@@ -2006,12 +2006,25 @@ MAINLOOP:
 
 		;Custom Routines
 		Loop, %MaxCustom% {
+			if (Custom%A_Index%CoordsTarget && Custom%A_Index%Target!=1)
+			{
+				MsgBox, Can't use "Target Dropdown" and "Target Coords" at the same time.
+				breakvar = 1
+				break
+			}
+			if (Custom%A_Index%CoordsItem && Custom%A_Index%Key)
+			{
+				MsgBox, Can't use "Use Coords" and "Skill Hotkey" at the same time.
+				breakvar = 1
+				break
+			}
 			if (Custom%A_Index%Active)
 			{
 				GuiControl,,Routine, %RoutineMessage23% %A_Index%
 				; use a hotkey or double click a specific coord
+				
 				if (!Custom%A_Index%CoordsItem)
-					SendHotkey(WinName,Custom%A_Index%Key)
+				SendHotkey(WinName,Custom%A_Index%Key)
 				else
 				{
 					;Double click Mouse
@@ -2048,6 +2061,8 @@ MAINLOOP:
 				}
 				
 				; use a target hotkey or single click a specific coord
+				
+				
 				if (!Custom%A_Index%CoordsTarget)
 				{
 					if (Custom%A_Index%Target = 2)
@@ -2058,10 +2073,10 @@ MAINLOOP:
 						SendHotkey(WinName,LastKey)
 					else if (Custom%A_Index%Target = 5)
 						SendHotkey(WinName,LastObjectKey)
-				}
+				}	
 				else
 				{
-					;Double click Mouse
+					;click Mouse
 					WinActivate, %WinName%
 					Sleep 100
 					MouseMove, Custom%A_Index%CoordsTargetX, Custom%A_Index%CoordsTargetY, 0
