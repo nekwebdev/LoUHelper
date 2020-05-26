@@ -2235,7 +2235,7 @@ HarvestSpot(Window, WinWidth, WinHeight, HarvestRuneKey, HarvestScroll, HarvestS
 				breakvar2 := 0
 
 			;Could not see the harvest bar for more than 5 seconds.
-			if (breakvar2 > 5)
+			if (breakvar2 > 3)
 				break
 		}
 		Sleep %LagDelay%
