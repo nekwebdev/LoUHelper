@@ -1975,35 +1975,6 @@ MAINLOOP:
 		if breakvar = 1
 			break
 
-			;Item Transfer
-			if (ItemTransfer)
-			{
-				WinActivate, %WinName%
-				i := 0
-				while (i < MoveCycleCount)
-				{
-					WinActivate, %WinName%
-					MouseMove, MoveFromX, MoveFromY, 0
-					Send, {LButton Down}
-					Sleep 250
-					MouseMove, MoveToX, MoveToY, 0
-					Sleep %LagDelay%
-					Send, {LButton Up}
-					i++
-				}
-				Send, {LButton Down}
-				Sleep %LagDelay%
-				Send, {LButton Up}
-				Sleep %LagDelay%
-				if (ItemTransferBreak)
-				{
-					break
-				}
-			}
-
-			if breakvar = 1
-				break
-
 		;Harvesting
 		Loop, %MaxSpots% {
 			if (Spot%A_Index%Active)
@@ -2125,6 +2096,35 @@ MAINLOOP:
 				break
 			Sleep %CustomRoutineDelay%
 		}
+
+		;Item Transfer
+		if (ItemTransfer)
+		{
+			WinActivate, %WinName%
+			i := 0
+			while (i < MoveCycleCount)
+			{
+				WinActivate, %WinName%
+				MouseMove, MoveFromX, MoveFromY, 0
+				Send, {LButton Down}
+				Sleep 250
+				MouseMove, MoveToX, MoveToY, 0
+				Sleep %LagDelay%
+				Send, {LButton Up}
+				i++
+			}
+			Send, {LButton Down}
+			Sleep %LagDelay%
+			Send, {LButton Up}
+			Sleep %LagDelay%
+			if (ItemTransferBreak)
+			{
+				break
+			}
+		}
+
+		if breakvar = 1
+			break
 
 		Sleep 100
 		if breakvar = 1
