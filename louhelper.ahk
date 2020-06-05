@@ -1214,7 +1214,7 @@ ADDCUSTOMTAB:
 		IniWrite, 0, %UserConfig%, GuiSettings, Custom%MaxCustom%CoordsRightY
 		IniWrite, 0, %UserConfig%, GuiSettings, Custom%MaxCustom%PreDelay
 		IniWrite, 0, %UserConfig%, GuiSettings, Custom%MaxCustom%PostDelay
-		IniWrite, % "", %UserConfig%, GuiSettings, Custom%MaxCustom%Target
+		IniWrite, 1, %UserConfig%, GuiSettings, Custom%MaxCustom%Target
 		IniWrite, % "", %UserConfig%, Hotkeys, Custom%MaxCustom%Key
 		Reload
 	}
