@@ -1985,12 +1985,6 @@ MAINLOOP:
 			}
 		}
 
-		if (Harvested)
-		{
-			MsgBox, Harvesting done
-			break
-		}
-
 		if breakvar = 1
 			break
 
